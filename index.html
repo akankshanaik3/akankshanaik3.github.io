@@ -1,404 +1,1038 @@
-<!-- =========================================================
-     FEATURED PROJECT — REPLACE YOUR EXISTING PROJECT SECTION
-========================================================= -->
+```html
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Akanksha U Naik — Data Analyst Portfolio | SQL, Power BI, Python & Advanced Excel">
+  <meta name="author" content="Akanksha U Naik">
+  <meta name="theme-color" content="#09090b">
+  <title>Akanksha U Naik | Data Analyst</title>
 
-<section id="project" class="py-24 border-t border-white/[0.06]">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Project Header -->
-    <div class="max-w-4xl">
-      <div class="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-3 py-1.5 text-xs font-medium text-cyan-300">
-        Featured Data Analytics Project
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          },
+          boxShadow: {
+            glow: "0 0 50px rgba(34, 211, 238, 0.12)",
+            card: "0 20px 60px rgba(0, 0, 0, 0.35)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      background: #09090b;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 10% 5%, rgba(34,211,238,.08), transparent 28%),
+        radial-gradient(circle at 90% 15%, rgba(139,92,246,.08), transparent 28%),
+        #09090b;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
+      -webkit-mask-image: linear-gradient(to bottom, black, transparent 90%);
+    }
+
+    .glass {
+      background: rgba(17,17,19,.72);
+      border: 1px solid rgba(255,255,255,.075);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #67e8f9, #a78bfa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .skill-tag {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.07);
+      background: rgba(255,255,255,.035);
+      padding: 6px 9px;
+      font-size: 11px;
+      color: #a1a1aa;
+    }
+
+    .skill-tag:hover {
+      border-color: rgba(34,211,238,.25);
+      color: #e4e4e7;
+    }
+
+    .terminal {
+      background: #0c0c0e;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .code-container {
+      counter-reset: line;
+    }
+
+    .code-line {
+      counter-increment: line;
+      display: block;
+    }
+
+    .code-line::before {
+      content: counter(line);
+      display: inline-block;
+      width: 28px;
+      margin-right: 16px;
+      color: #3f3f46;
+      text-align: right;
+      user-select: none;
+    }
+
+    .timeline-line {
+      background: linear-gradient(
+        to bottom,
+        #22d3ee,
+        #a78bfa,
+        rgba(255,255,255,.08)
+      );
+    }
+
+    ::selection {
+      background: rgba(34,211,238,.25);
+      color: white;
+    }
+
+    .fade-up {
+      animation: fadeUp .8s ease-out both;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body class="text-zinc-200 font-sans antialiased">
+
+  <!-- Background -->
+  <div class="fixed inset-0 -z-10 grid-bg pointer-events-none"></div>
+
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================== -->
+
+  <header class="fixed top-0 left-0 right-0 z-50">
+
+    <nav class="glass border-x-0 border-t-0">
+
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="h-16 flex items-center justify-between">
+
+          <a
+            href="#home"
+            class="font-bold tracking-tight text-white text-lg"
+          >
+            <span class="text-cyan-400">&lt;</span>Akanksha<span class="text-violet-400">/&gt;</span>
+          </a>
+
+          <div class="hidden md:flex items-center gap-8 text-sm text-zinc-400">
+
+            <a href="#skills" class="hover:text-cyan-400 transition">
+              Skills
+            </a>
+
+            <a href="#project" class="hover:text-cyan-400 transition">
+              Project
+            </a>
+
+            <a href="#experience" class="hover:text-cyan-400 transition">
+              Experience
+            </a>
+
+            <a href="#education" class="hover:text-cyan-400 transition">
+              Education
+            </a>
+
+            <a href="#contact" class="hover:text-cyan-400 transition">
+              Contact
+            </a>
+
+          </div>
+
+          <a
+            href="mailto:akankshanaik314@gmail.com"
+            class="hidden sm:inline-flex items-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-300 hover:bg-cyan-400/20 transition"
+          >
+            Let's Connect
+          </a>
+
+        </div>
+
       </div>
 
-      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mt-5">
-        SaaS Product User
-        <span class="gradient-text">Engagement & Churn Analysis</span>
-      </h2>
+    </nav>
 
-      <p class="text-zinc-400 text-lg leading-8 mt-6 max-w-3xl">
-        An end-to-end data analytics project focused on understanding customer
-        engagement, identifying churn patterns and measuring the recurring
-        revenue impact of customer attrition.
-      </p>
+  </header>
 
-      <!-- Tech Stack -->
-      <div class="flex flex-wrap gap-2 mt-6">
-        <span class="skill-tag">SQL</span>
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">Pandas</span>
-        <span class="skill-tag">Power BI</span>
-        <span class="skill-tag">DAX</span>
-        <span class="skill-tag">Excel</span>
+
+  <main id="home">
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <section class="relative min-h-screen flex items-center pt-24">
+
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+
+        <div class="grid lg:grid-cols-[1.15fr_.85fr] gap-16 items-center">
+
+          <!-- Hero Content -->
+
+          <div class="fade-up">
+
+            <div class="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/5 px-3 py-1.5 text-xs font-medium text-emerald-300 mb-7">
+
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+
+              Open to Data Analyst Opportunities · Bangalore
+
+            </div>
+
+            <p class="text-sm uppercase tracking-[0.3em] text-cyan-400 font-semibold mb-4">
+              Data Analyst Portfolio
+            </p>
+
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[.95] text-white">
+
+              Hi, I'm
+
+              <span class="gradient-text block mt-3">
+                Akanksha U Naik.
+              </span>
+
+            </h1>
+
+            <p class="mt-7 text-xl sm:text-2xl text-zinc-300 font-medium max-w-2xl">
+
+              Transforming Raw IT Data into Actionable Business Insights.
+
+            </p>
+
+            <p class="mt-5 text-base leading-7 text-zinc-400 max-w-2xl">
+
+              Aspiring Data Analyst with a strong foundation in SQL,
+              Power BI, Python and Advanced Excel, focused on transforming
+              data into clear and actionable business insights.
+
+            </p>
+
+
+            <!-- Contact Buttons -->
+
+            <div class="flex flex-wrap gap-3 mt-8">
+
+              <a
+                href="mailto:akankshanaik314@gmail.com"
+                class="inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-5 py-3 text-sm font-bold text-zinc-950 hover:bg-cyan-300 transition shadow-glow"
+              >
+                ✉ Email Me
+              </a>
+
+              <a
+                href="tel:+917411421350"
+                class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+              >
+                ☎ Call Me
+              </a>
+
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+              >
+                LinkedIn ↗
+              </a>
+
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+
+            <!-- Contact Details -->
+
+            <div class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-zinc-500">
+
+              <span>📍 Bangalore, Karnataka</span>
+
+              <span>
+                ✉ akankshanaik314@gmail.com
+              </span>
+
+              <span>
+                ☎ +91 74114 21350
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Profile -->
+
+          <div class="relative flex justify-center fade-up">
+
+            <div class="absolute w-72 h-72 rounded-full bg-cyan-400/10 blur-3xl"></div>
+
+            <div class="absolute w-56 h-56 rounded-full bg-violet-500/10 blur-3xl -bottom-10 -right-5"></div>
+
+            <div class="relative glass rounded-[2rem] p-8 w-full max-w-sm shadow-card">
+
+              <div class="absolute top-5 right-5 text-xs font-mono text-zinc-600">
+                01 / PROFILE
+              </div>
+
+              <div class="pt-5">
+
+                <img
+                  src="profile.jpg"
+                  class="rounded-full w-48 h-48 mx-auto object-cover border-4 border-white/10 shadow-2xl"
+                  alt="Akanksha U Naik"
+                >
+
+              </div>
+
+              <div class="text-center mt-7">
+
+                <h2 class="text-2xl font-bold text-white">
+                  Akanksha U Naik
+                </h2>
+
+                <p class="text-cyan-400 mt-1 font-medium">
+                  Data Analyst
+                </p>
+
+                <p class="text-sm text-zinc-500 mt-2">
+                  Bangalore, Karnataka
+                </p>
+
+              </div>
+
+
+              <div class="grid grid-cols-2 gap-3 mt-7">
+
+                <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
+
+                  <p class="text-xs text-zinc-500">
+                    Core Tool
+                  </p>
+
+                  <p class="mt-1 font-semibold text-white">
+                    SQL
+                  </p>
+
+                </div>
+
+                <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
+
+                  <p class="text-xs text-zinc-500">
+                    BI Tool
+                  </p>
+
+                  <p class="mt-1 font-semibold text-white">
+                    Power BI
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
-    </div>
+
+    </section>
 
 
-    <!-- =====================================================
-         BUSINESS CASE
-    ====================================================== -->
+    <!-- =========================================================
+         SKILLS
+    ========================================================== -->
 
-    <div class="grid lg:grid-cols-2 gap-6 mt-12">
+    <section id="skills" class="py-24 border-t border-white/[.06]">
 
-      <article class="glass rounded-2xl p-7">
-        <div class="flex items-center gap-3">
-          <span class="text-cyan-400 font-mono text-sm">01</span>
-          <h3 class="text-2xl font-bold text-white">
-            Business Case
-          </h3>
-        </div>
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-        <p class="text-zinc-400 leading-7 mt-5">
-          The objective of this project is to analyze SaaS customer behavior
-          and determine which factors are associated with customer churn.
-          The analysis combines subscription, customer and product-engagement
-          data to provide actionable business insights.
-        </p>
+        <div class="max-w-2xl mb-12">
 
-        <div class="space-y-4 mt-6">
+          <p class="text-sm uppercase tracking-[.25em] text-cyan-400 font-semibold">
+            Technical Stack
+          </p>
 
-          <div class="flex gap-3">
-            <span class="text-cyan-400 font-bold">→</span>
-            <p class="text-sm text-zinc-400">
-              Identify customers who have churned.
-            </p>
-          </div>
+          <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-white mt-3">
 
-          <div class="flex gap-3">
-            <span class="text-cyan-400 font-bold">→</span>
-            <p class="text-sm text-zinc-400">
-              Analyze engagement patterns before churn.
-            </p>
-          </div>
-
-          <div class="flex gap-3">
-            <span class="text-cyan-400 font-bold">→</span>
-            <p class="text-sm text-zinc-400">
-              Compare churn across subscription plans and customer segments.
-            </p>
-          </div>
-
-          <div class="flex gap-3">
-            <span class="text-cyan-400 font-bold">→</span>
-            <p class="text-sm text-zinc-400">
-              Measure the recurring revenue associated with churned customers.
-            </p>
-          </div>
-
-        </div>
-      </article>
-
-
-      <!-- KPIs -->
-
-      <article class="glass rounded-2xl p-7">
-
-        <div class="flex items-center gap-3">
-          <span class="text-violet-400 font-mono text-sm">02</span>
-          <h3 class="text-2xl font-bold text-white">
-            Business KPIs
-          </h3>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4 mt-6">
-
-          <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-5">
-            <p class="text-xs uppercase tracking-wider text-zinc-500">
-              Customer KPI
-            </p>
-
-            <h4 class="text-2xl font-bold text-white mt-2">
-              Churn Rate
-            </h4>
-
-            <p class="text-xs text-zinc-500 mt-2">
-              Churned Customers ÷ Customers at Start of Period
-            </p>
-          </div>
-
-
-          <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-5">
-            <p class="text-xs uppercase tracking-wider text-zinc-500">
-              Revenue KPI
-            </p>
-
-            <h4 class="text-2xl font-bold text-white mt-2">
-              MRR
-            </h4>
-
-            <p class="text-xs text-zinc-500 mt-2">
-              Monthly Recurring Revenue
-            </p>
-          </div>
-
-
-          <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-5">
-            <p class="text-xs uppercase tracking-wider text-zinc-500">
-              Engagement
-            </p>
-
-            <h4 class="text-2xl font-bold text-white mt-2">
-              Active Users
-            </h4>
-
-            <p class="text-xs text-zinc-500 mt-2">
-              Users interacting with the product
-            </p>
-          </div>
-
-
-          <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-5">
-            <p class="text-xs uppercase tracking-wider text-zinc-500">
-              Revenue Impact
-            </p>
-
-            <h4 class="text-2xl font-bold text-white mt-2">
-              MRR Lost
-            </h4>
-
-            <p class="text-xs text-zinc-500 mt-2">
-              Recurring revenue associated with churn
-            </p>
-          </div>
-
-        </div>
-
-      </article>
-
-    </div>
-
-
-    <!-- =====================================================
-         DATASET / SCHEMA
-    ====================================================== -->
-
-    <article class="glass rounded-2xl p-7 mt-6">
-
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-
-        <div>
-          <div class="flex items-center gap-3">
-
-            <span class="text-emerald-400 font-mono text-sm">
-              03
+            Skills built for
+            <span class="gradient-text">
+              real-world analysis.
             </span>
 
-            <h3 class="text-2xl font-bold text-white">
-              Dataset Structure
+          </h2>
+
+          <p class="mt-4 text-zinc-400 leading-7">
+
+            A practical analytics toolkit covering data querying,
+            business intelligence, data manipulation and spreadsheet analysis.
+
+          </p>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+
+
+          <!-- SQL -->
+
+          <article class="group glass rounded-2xl p-6 hover:-translate-y-1 hover:border-cyan-400/30 transition duration-300">
+
+            <div class="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-300 font-bold">
+              SQL
+            </div>
+
+            <h3 class="text-xl font-bold text-white mt-6">
+              SQL
             </h3>
 
+            <p class="text-sm text-zinc-500 mt-2 leading-6">
+              Querying, transforming and analyzing relational datasets.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mt-5">
+
+              <span class="skill-tag">Joins</span>
+              <span class="skill-tag">CTEs</span>
+              <span class="skill-tag">Window Functions</span>
+              <span class="skill-tag">Aggregations</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- Power BI -->
+
+          <article class="group glass rounded-2xl p-6 hover:-translate-y-1 hover:border-violet-400/30 transition duration-300">
+
+            <div class="w-12 h-12 rounded-xl bg-violet-400/10 border border-violet-400/20 flex items-center justify-center text-violet-300 font-bold">
+              BI
+            </div>
+
+            <h3 class="text-xl font-bold text-white mt-6">
+              Power BI
+            </h3>
+
+            <p class="text-sm text-zinc-500 mt-2 leading-6">
+              Interactive dashboards, DAX calculations and data modeling.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mt-5">
+
+              <span class="skill-tag">DAX</span>
+              <span class="skill-tag">Modeling</span>
+              <span class="skill-tag">Power Query</span>
+              <span class="skill-tag">Dashboards</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- Python -->
+
+          <article class="group glass rounded-2xl p-6 hover:-translate-y-1 hover:border-yellow-400/30 transition duration-300">
+
+            <div class="w-12 h-12 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center text-yellow-300 font-bold">
+              Py
+            </div>
+
+            <h3 class="text-xl font-bold text-white mt-6">
+              Python
+            </h3>
+
+            <p class="text-sm text-zinc-500 mt-2 leading-6">
+              Data preparation, analysis and visualization using Python.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mt-5">
+
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Matplotlib</span>
+              <span class="skill-tag">Cleaning</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- Excel -->
+
+          <article class="group glass rounded-2xl p-6 hover:-translate-y-1 hover:border-emerald-400/30 transition duration-300">
+
+            <div class="w-12 h-12 rounded-xl bg-emerald-400/10 border border-emerald-400/20 flex items-center justify-center text-emerald-300 font-bold">
+              X
+            </div>
+
+            <h3 class="text-xl font-bold text-white mt-6">
+              Advanced Excel
+            </h3>
+
+            <p class="text-sm text-zinc-500 mt-2 leading-6">
+              Business reporting, spreadsheet analysis and KPI tracking.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mt-5">
+
+              <span class="skill-tag">XLOOKUP</span>
+              <span class="skill-tag">Pivot Tables</span>
+              <span class="skill-tag">Power Query</span>
+              <span class="skill-tag">KPI Analysis</span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FEATURED PROJECT
+    ========================================================== -->
+
+    <section id="project" class="py-24 border-t border-white/[.06]">
+
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+
+        <!-- Project Header -->
+
+        <div class="max-w-4xl">
+
+          <div class="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-3 py-1.5 text-xs font-medium text-cyan-300">
+
+            Featured Data Analytics Project
+
           </div>
 
-          <p class="text-sm text-zinc-500 mt-2">
-            Three connected tables used for customer, subscription and
-            product-engagement analysis.
+
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mt-5">
+
+            SaaS Product User
+
+            <span class="gradient-text">
+              Engagement & Churn Analysis
+            </span>
+
+          </h2>
+
+
+          <p class="text-zinc-400 text-lg leading-8 mt-6 max-w-3xl">
+
+            An end-to-end data analytics project focused on understanding
+            customer engagement, identifying churn patterns and measuring
+            the recurring revenue impact of customer attrition.
+
           </p>
-        </div>
-
-        <span class="text-xs font-mono text-zinc-600">
-          3 TABLES
-        </span>
-
-      </div>
 
 
-      <div class="grid lg:grid-cols-3 gap-5 mt-7">
+          <div class="flex flex-wrap gap-2 mt-6">
 
-        <!-- CUSTOMERS -->
-
-        <div class="rounded-2xl bg-zinc-950/80 border border-white/[0.07] overflow-hidden">
-
-          <div class="px-5 py-4 border-b border-white/[0.06]">
-
-            <div class="flex justify-between">
-
-              <span class="font-mono text-sm font-semibold text-cyan-300">
-                customers
-              </span>
-
-              <span class="text-xs text-zinc-600">
-                TABLE 01
-              </span>
-
-            </div>
-
-          </div>
-
-          <div class="p-5 font-mono text-xs space-y-3 text-zinc-400">
-
-            <div>
-              <span class="text-cyan-300">customer_id</span>
-              <span class="text-zinc-600"> UUID · PK</span>
-            </div>
-
-            <div>
-              <span class="text-cyan-300">signup_date</span>
-              <span class="text-zinc-600"> DATE</span>
-            </div>
-
-            <div>
-              <span class="text-cyan-300">country</span>
-              <span class="text-zinc-600"> VARCHAR</span>
-            </div>
-
-            <div>
-              <span class="text-cyan-300">plan_type</span>
-              <span class="text-zinc-600"> VARCHAR</span>
-            </div>
-
-            <div>
-              <span class="text-cyan-300">status</span>
-              <span class="text-zinc-600"> VARCHAR</span>
-            </div>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">DAX</span>
+            <span class="skill-tag">Excel</span>
 
           </div>
 
         </div>
 
 
-        <!-- EVENTS -->
+        <!-- BUSINESS CASE + KPIs -->
 
-        <div class="rounded-2xl bg-zinc-950/80 border border-white/[0.07] overflow-hidden">
+        <div class="grid lg:grid-cols-2 gap-6 mt-12">
 
-          <div class="px-5 py-4 border-b border-white/[0.06]">
 
-            <div class="flex justify-between">
+          <!-- Business Case -->
 
-              <span class="font-mono text-sm font-semibold text-violet-300">
-                product_events
+          <article class="glass rounded-2xl p-7">
+
+            <div class="flex items-center gap-3">
+
+              <span class="text-cyan-400 font-mono text-sm">
+                01
               </span>
 
-              <span class="text-xs text-zinc-600">
-                TABLE 02
+              <h3 class="text-2xl font-bold text-white">
+                Business Case
+              </h3>
+
+            </div>
+
+
+            <p class="text-zinc-400 leading-7 mt-5">
+
+              The objective of this project is to analyze SaaS customer
+              behavior and determine which factors are associated with
+              customer churn.
+
+              The analysis combines customer, subscription and
+              product-engagement data to provide actionable business insights.
+
+            </p>
+
+
+            <div class="space-y-4 mt-6">
+
+              <div class="flex gap-3">
+
+                <span class="text-cyan-400 font-bold">
+                  →
+                </span>
+
+                <p class="text-sm text-zinc-400">
+                  Identify customers who have churned.
+                </p>
+
+              </div>
+
+
+              <div class="flex gap-3">
+
+                <span class="text-cyan-400 font-bold">
+                  →
+                </span>
+
+                <p class="text-sm text-zinc-400">
+                  Analyze engagement patterns before churn.
+                </p>
+
+              </div>
+
+
+              <div class="flex gap-3">
+
+                <span class="text-cyan-400 font-bold">
+                  →
+                </span>
+
+                <p class="text-sm text-zinc-400">
+                  Compare churn across subscription plans and segments.
+                </p>
+
+              </div>
+
+
+              <div class="flex gap-3">
+
+                <span class="text-cyan-400 font-bold">
+                  →
+                </span>
+
+                <p class="text-sm text-zinc-400">
+                  Measure recurring revenue associated with churned customers.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- KPIs -->
+
+          <article class="glass rounded-2xl p-7">
+
+            <div class="flex items-center gap-3">
+
+              <span class="text-violet-400 font-mono text-sm">
+                02
               </span>
 
+              <h3 class="text-2xl font-bold text-white">
+                Business KPIs
+              </h3>
+
             </div>
 
-          </div>
 
-          <div class="p-5 font-mono text-xs space-y-3 text-zinc-400">
+            <div class="grid grid-cols-2 gap-4 mt-6">
 
-            <div>
-              <span class="text-violet-300">event_id</span>
-              <span class="text-zinc-600"> BIGINT · PK</span>
+
+              <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-5">
+
+                <p class="text-xs uppercase tracking-wider text-zinc-500">
+                  Customer KPI
+                </p>
+
+                <h4 class="text-2xl font-bold text-white mt-2">
+                  Churn Rate
+                </h4>
+
+                <p class="text-xs text-zinc-500 mt-2">
+                  Churned Customers ÷ Customers at Start of Period
+                </p>
+
+              </div>
+
+
+              <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-5">
+
+                <p class="text-xs uppercase tracking-wider text-zinc-500">
+                  Revenue KPI
+                </p>
+
+                <h4 class="text-2xl font-bold text-white mt-2">
+                  MRR
+                </h4>
+
+                <p class="text-xs text-zinc-500 mt-2">
+                  Monthly Recurring Revenue
+                </p>
+
+              </div>
+
+
+              <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-5">
+
+                <p class="text-xs uppercase tracking-wider text-zinc-500">
+                  Engagement
+                </p>
+
+                <h4 class="text-2xl font-bold text-white mt-2">
+                  Active Users
+                </h4>
+
+                <p class="text-xs text-zinc-500 mt-2">
+                  Users interacting with the product
+                </p>
+
+              </div>
+
+
+              <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-5">
+
+                <p class="text-xs uppercase tracking-wider text-zinc-500">
+                  Revenue Impact
+                </p>
+
+                <h4 class="text-2xl font-bold text-white mt-2">
+                  MRR Lost
+                </h4>
+
+                <p class="text-xs text-zinc-500 mt-2">
+                  Revenue associated with churn
+                </p>
+
+              </div>
+
             </div>
 
-            <div>
-              <span class="text-violet-300">customer_id</span>
-              <span class="text-zinc-600"> UUID · FK</span>
-            </div>
-
-            <div>
-              <span class="text-violet-300">event_date</span>
-              <span class="text-zinc-600"> TIMESTAMP</span>
-            </div>
-
-            <div>
-              <span class="text-violet-300">event_name</span>
-              <span class="text-zinc-600"> VARCHAR</span>
-            </div>
-
-            <div>
-              <span class="text-violet-300">session_minutes</span>
-              <span class="text-zinc-600"> INTEGER</span>
-            </div>
-
-          </div>
+          </article>
 
         </div>
 
 
-        <!-- SUBSCRIPTIONS -->
+        <!-- DATA SCHEMA -->
 
-        <div class="rounded-2xl bg-zinc-950/80 border border-white/[0.07] overflow-hidden">
+        <article class="glass rounded-2xl p-7 mt-6">
 
-          <div class="px-5 py-4 border-b border-white/[0.06]">
-
-            <div class="flex justify-between">
-
-              <span class="font-mono text-sm font-semibold text-emerald-300">
-                subscriptions
-              </span>
-
-              <span class="text-xs text-zinc-600">
-                TABLE 03
-              </span>
-
-            </div>
-
-          </div>
-
-          <div class="p-5 font-mono text-xs space-y-3 text-zinc-400">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
 
             <div>
-              <span class="text-emerald-300">subscription_id</span>
-              <span class="text-zinc-600"> BIGINT · PK</span>
+
+              <div class="flex items-center gap-3">
+
+                <span class="text-emerald-400 font-mono text-sm">
+                  03
+                </span>
+
+                <h3 class="text-2xl font-bold text-white">
+                  Dataset Structure
+                </h3>
+
+              </div>
+
+              <p class="text-sm text-zinc-500 mt-2">
+                Three connected tables used for customer, subscription
+                and product-engagement analysis.
+              </p>
+
             </div>
 
-            <div>
-              <span class="text-emerald-300">customer_id</span>
-              <span class="text-zinc-600"> UUID · FK</span>
-            </div>
 
-            <div>
-              <span class="text-emerald-300">start_date</span>
-              <span class="text-zinc-600"> DATE</span>
-            </div>
-
-            <div>
-              <span class="text-emerald-300">end_date</span>
-              <span class="text-zinc-600"> DATE</span>
-            </div>
-
-            <div>
-              <span class="text-emerald-300">mrr</span>
-              <span class="text-zinc-600"> DECIMAL</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </article>
-
-
-    <!-- =====================================================
-         SQL + PYTHON
-    ====================================================== -->
-
-    <div class="grid xl:grid-cols-2 gap-6 mt-6">
-
-
-      <!-- SQL ANALYSIS -->
-
-      <article class="terminal rounded-2xl overflow-hidden shadow-card">
-
-        <div class="px-5 py-4 border-b border-white/[0.06] flex items-center justify-between">
-
-          <div class="flex items-center gap-3">
-
-            <div class="flex gap-1.5">
-              <span class="w-2.5 h-2.5 rounded-full bg-red-400/70"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-yellow-400/70"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-green-400/70"></span>
-            </div>
-
-            <span class="font-mono text-xs text-zinc-400">
-              churn_analysis.sql
+            <span class="text-xs font-mono text-zinc-600">
+              3 TABLES
             </span>
 
           </div>
 
-          <span class="text-xs text-cyan-400 font-mono">
-            SQL ANALYSIS
-          </span>
 
-        </div>
+          <div class="grid lg:grid-cols-3 gap-5 mt-7">
 
 
-        <div class="p-5 overflow-x-auto code-container">
+            <!-- Customers -->
+
+            <div class="rounded-2xl bg-zinc-950/80 border border-white/[.07] overflow-hidden">
+
+              <div class="px-5 py-4 border-b border-white/[.06]">
+
+                <div class="flex justify-between">
+
+                  <span class="font-mono text-sm font-semibold text-cyan-300">
+                    customers
+                  </span>
+
+                  <span class="text-xs text-zinc-600">
+                    TABLE 01
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="p-5 font-mono text-xs space-y-3 text-zinc-400">
+
+                <div>
+                  <span class="text-cyan-300">customer_id</span>
+                  <span class="text-zinc-600"> UUID · PK</span>
+                </div>
+
+                <div>
+                  <span class="text-cyan-300">signup_date</span>
+                  <span class="text-zinc-600"> DATE</span>
+                </div>
+
+                <div>
+                  <span class="text-cyan-300">country</span>
+                  <span class="text-zinc-600"> VARCHAR</span>
+                </div>
+
+                <div>
+                  <span class="text-cyan-300">plan_type</span>
+                  <span class="text-zinc-600"> VARCHAR</span>
+                </div>
+
+                <div>
+                  <span class="text-cyan-300">status</span>
+                  <span class="text-zinc-600"> VARCHAR</span>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- Product Events -->
+
+            <div class="rounded-2xl bg-zinc-950/80 border border-white/[.07] overflow-hidden">
+
+              <div class="px-5 py-4 border-b border-white/[.06]">
+
+                <div class="flex justify-between">
+
+                  <span class="font-mono text-sm font-semibold text-violet-300">
+                    product_events
+                  </span>
+
+                  <span class="text-xs text-zinc-600">
+                    TABLE 02
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="p-5 font-mono text-xs space-y-3 text-zinc-400">
+
+                <div>
+                  <span class="text-violet-300">event_id</span>
+                  <span class="text-zinc-600"> BIGINT · PK</span>
+                </div>
+
+                <div>
+                  <span class="text-violet-300">customer_id</span>
+                  <span class="text-zinc-600"> UUID · FK</span>
+                </div>
+
+                <div>
+                  <span class="text-violet-300">event_date</span>
+                  <span class="text-zinc-600"> TIMESTAMP</span>
+                </div>
+
+                <div>
+                  <span class="text-violet-300">event_name</span>
+                  <span class="text-zinc-600"> VARCHAR</span>
+                </div>
+
+                <div>
+                  <span class="text-violet-300">session_minutes</span>
+                  <span class="text-zinc-600"> INTEGER</span>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- Subscriptions -->
+
+            <div class="rounded-2xl bg-zinc-950/80 border border-white/[.07] overflow-hidden">
+
+              <div class="px-5 py-4 border-b border-white/[.06]">
+
+                <div class="flex justify-between">
+
+                  <span class="font-mono text-sm font-semibold text-emerald-300">
+                    subscriptions
+                  </span>
+
+                  <span class="text-xs text-zinc-600">
+                    TABLE 03
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="p-5 font-mono text-xs space-y-3 text-zinc-400">
+
+                <div>
+                  <span class="text-emerald-300">subscription_id</span>
+                  <span class="text-zinc-600"> BIGINT · PK</span>
+                </div>
+
+                <div>
+                  <span class="text-emerald-300">customer_id</span>
+                  <span class="text-zinc-600"> UUID · FK</span>
+                </div>
+
+                <div>
+                  <span class="text-emerald-300">start_date</span>
+                  <span class="text-zinc-600"> DATE</span>
+                </div>
+
+                <div>
+                  <span class="text-emerald-300">end_date</span>
+                  <span class="text-zinc-600"> DATE</span>
+                </div>
+
+                <div>
+                  <span class="text-emerald-300">mrr</span>
+                  <span class="text-zinc-600"> DECIMAL</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- SQL + PYTHON -->
+
+        <div class="grid xl:grid-cols-2 gap-6 mt-6">
+
+
+          <!-- SQL -->
+
+          <article class="terminal rounded-2xl overflow-hidden shadow-card">
+
+            <div class="px-5 py-4 border-b border-white/[.06] flex items-center justify-between">
+
+              <div class="flex items-center gap-3">
+
+                <div class="flex gap-1.5">
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-400/70"></span>
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-400/70"></span>
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-400/70"></span>
+
+                </div>
+
+                <span class="font-mono text-xs text-zinc-400">
+                  churn_analysis.sql
+                </span>
+
+              </div>
+
+              <span class="text-xs text-cyan-400 font-mono">
+                SQL ANALYSIS
+              </span>
+
+            </div>
+
+
+            <div class="p-5 overflow-x-auto code-container">
 
 <pre class="font-mono text-xs sm:text-sm leading-7 text-zinc-300"><code><span class="code-line"><span class="text-violet-400">WITH</span> ranked_subscriptions <span class="text-violet-400">AS</span> (</span>
 <span class="code-line">  <span class="text-violet-400">SELECT</span></span>
@@ -424,49 +1058,55 @@
 <span class="code-line">  <span class="text-violet-400">AND</span> rs.end_date &lt; <span class="text-yellow-300">CURRENT_DATE</span></span>
 <span class="code-line"><span class="text-violet-400">ORDER BY</span> rs.mrr <span class="text-violet-400">DESC</span>;</span></code></pre>
 
-        </div>
-
-
-        <div class="px-5 pb-5">
-
-          <p class="text-xs text-zinc-600">
-            Demonstrates a CTE, JOIN and ROW_NUMBER() window function
-            to identify the latest subscription record for each customer.
-          </p>
-
-        </div>
-
-      </article>
-
-
-      <!-- PYTHON CLEANING -->
-
-      <article class="terminal rounded-2xl overflow-hidden shadow-card">
-
-        <div class="px-5 py-4 border-b border-white/[0.06] flex items-center justify-between">
-
-          <div class="flex items-center gap-3">
-
-            <div class="flex gap-1.5">
-              <span class="w-2.5 h-2.5 rounded-full bg-red-400/70"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-yellow-400/70"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-green-400/70"></span>
             </div>
 
-            <span class="font-mono text-xs text-zinc-400">
-              data_cleaning.py
-            </span>
 
-          </div>
+            <div class="px-5 pb-5">
 
-          <span class="text-xs text-yellow-300 font-mono">
-            PYTHON
-          </span>
+              <p class="text-xs text-zinc-600 leading-5">
 
-        </div>
+                Uses a CTE, JOIN and ROW_NUMBER() window function
+                to isolate the latest subscription record for each customer.
+
+              </p>
+
+            </div>
+
+          </article>
 
 
-        <div class="p-5 overflow-x-auto code-container">
+          <!-- PYTHON -->
+
+          <article class="terminal rounded-2xl overflow-hidden shadow-card">
+
+            <div class="px-5 py-4 border-b border-white/[.06] flex items-center justify-between">
+
+              <div class="flex items-center gap-3">
+
+                <div class="flex gap-1.5">
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-400/70"></span>
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-400/70"></span>
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-400/70"></span>
+
+                </div>
+
+                <span class="font-mono text-xs text-zinc-400">
+                  data_cleaning.py
+                </span>
+
+              </div>
+
+              <span class="text-xs text-yellow-300 font-mono">
+                PYTHON
+              </span>
+
+            </div>
+
+
+            <div class="p-5 overflow-x-auto code-container">
 
 <pre class="font-mono text-xs sm:text-sm leading-7 text-zinc-300"><code><span class="code-line"><span class="text-violet-400">import</span> pandas <span class="text-violet-400">as</span> pd</span>
 <span class="code-line"></span>
@@ -488,9 +1128,11 @@
 <span class="code-line"></span>
 <span class="code-line"><span class="text-zinc-500"># Remove duplicate events</span></span>
 <span class="code-line">df = df.drop_duplicates(</span>
-<span class="code-line">    subset=[<span class="text-green-300">"customer_id"</span>,</span>
-<span class="code-line">            <span class="text-green-300">"event_date"</span>,</span>
-<span class="code-line">            <span class="text-green-300">"event_name"</span>]</span>
+<span class="code-line">    subset=[</span>
+<span class="code-line">      <span class="text-green-300">"customer_id"</span>,</span>
+<span class="code-line">      <span class="text-green-300">"event_date"</span>,</span>
+<span class="code-line">      <span class="text-green-300">"event_name"</span></span>
+<span class="code-line">    ]</span>
 <span class="code-line">)</span>
 <span class="code-line"></span>
 <span class="code-line"><span class="text-zinc-500"># Handle missing session duration</span></span>
@@ -499,252 +1141,560 @@
 <span class="code-line">      .fillna(<span class="text-orange-300">0</span>)</span>
 <span class="code-line">)</span></code></pre>
 
+            </div>
+
+
+            <div class="px-5 pb-5">
+
+              <p class="text-xs text-zinc-600 leading-5">
+
+                Demonstrates practical Pandas data preparation before
+                analysis and visualization.
+
+              </p>
+
+            </div>
+
+          </article>
+
         </div>
 
 
-        <div class="px-5 pb-5">
+        <!-- POWER BI -->
 
-          <p class="text-xs text-zinc-600">
-            Demonstrates practical Pandas data preparation before analysis
-            and visualization.
-          </p>
+        <article class="glass rounded-2xl p-7 mt-6">
 
-        </div>
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
 
-      </article>
+            <div>
 
-    </div>
+              <div class="flex items-center gap-3">
+
+                <span class="text-violet-400 font-mono text-sm">
+                  04
+                </span>
+
+                <h3 class="text-2xl font-bold text-white">
+                  Power BI Dashboard
+                </h3>
+
+              </div>
+
+              <p class="text-zinc-400 mt-2 leading-7 max-w-3xl">
+
+                A two-page interactive dashboard designed to help
+                stakeholders monitor revenue, customer churn and
+                product engagement.
+
+              </p>
+
+            </div>
 
 
-    <!-- =====================================================
-         POWER BI DASHBOARD
-    ====================================================== -->
+            <div class="flex gap-2">
 
-    <article class="glass rounded-2xl p-7 mt-6">
+              <span class="rounded-lg bg-violet-400/10 border border-violet-400/20 px-3 py-2 text-xs font-semibold text-violet-300">
+                2 Pages
+              </span>
 
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+              <span class="rounded-lg bg-cyan-400/10 border border-cyan-400/20 px-3 py-2 text-xs font-semibold text-cyan-300">
+                Interactive
+              </span>
 
-        <div>
+            </div>
+
+          </div>
+
+
+          <div class="grid lg:grid-cols-2 gap-6 mt-8">
+
+
+            <!-- PAGE 1 -->
+
+            <div class="rounded-2xl border border-white/[.07] bg-zinc-950/60 p-5">
+
+              <div class="flex items-center justify-between">
+
+                <div>
+
+                  <p class="text-xs font-mono text-cyan-400">
+                    PAGE 01
+                  </p>
+
+                  <h4 class="text-xl font-bold text-white mt-1">
+                    Executive Overview
+                  </h4>
+
+                </div>
+
+                <span class="text-xs text-zinc-600">
+                  OVERVIEW
+                </span>
+
+              </div>
+
+
+              <div class="grid grid-cols-2 gap-3 mt-5">
+
+                <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
+
+                  <p class="text-[10px] uppercase text-zinc-600">
+                    Total Customers
+                  </p>
+
+                  <p class="text-xl font-bold text-white mt-2">
+                    KPI
+                  </p>
+
+                </div>
+
+
+                <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
+
+                  <p class="text-[10px] uppercase text-zinc-600">
+                    Churn Rate
+                  </p>
+
+                  <p class="text-xl font-bold text-white mt-2">
+                    KPI
+                  </p>
+
+                </div>
+
+
+                <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
+
+                  <p class="text-[10px] uppercase text-zinc-600">
+                    MRR
+                  </p>
+
+                  <p class="text-xl font-bold text-white mt-2">
+                    KPI
+                  </p>
+
+                </div>
+
+
+                <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
+
+                  <p class="text-[10px] uppercase text-zinc-600">
+                    MRR Lost
+                  </p>
+
+                  <p class="text-xl font-bold text-white mt-2">
+                    KPI
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="h-28 rounded-xl bg-white/[.03] border border-white/[.06] mt-3 p-4 flex items-end gap-2">
+
+                <div class="w-full h-[35%] rounded-t bg-cyan-400/20"></div>
+                <div class="w-full h-[48%] rounded-t bg-cyan-400/30"></div>
+                <div class="w-full h-[42%] rounded-t bg-cyan-400/25"></div>
+                <div class="w-full h-[67%] rounded-t bg-cyan-400/40"></div>
+                <div class="w-full h-[58%] rounded-t bg-cyan-400/35"></div>
+                <div class="w-full h-[82%] rounded-t bg-cyan-400/50"></div>
+
+              </div>
+
+
+              <div class="flex flex-wrap gap-2 mt-4 text-xs text-zinc-500">
+
+                <span>MRR Trend</span>
+                <span>•</span>
+                <span>Churn Trend</span>
+                <span>•</span>
+                <span>Plan Distribution</span>
+
+              </div>
+
+            </div>
+
+
+            <!-- PAGE 2 -->
+
+            <div class="rounded-2xl border border-white/[.07] bg-zinc-950/60 p-5">
+
+              <div class="flex items-center justify-between">
+
+                <div>
+
+                  <p class="text-xs font-mono text-violet-400">
+                    PAGE 02
+                  </p>
+
+                  <h4 class="text-xl font-bold text-white mt-1">
+                    Engagement & Retention
+                  </h4>
+
+                </div>
+
+                <span class="text-xs text-zinc-600">
+                  ANALYSIS
+                </span>
+
+              </div>
+
+
+              <div class="grid grid-cols-2 gap-3 mt-5">
+
+                <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
+
+                  <p class="text-xs text-zinc-500">
+                    Active Users
+                  </p>
+
+                  <div class="h-2 bg-violet-400/20 rounded mt-5 w-4/5"></div>
+
+                </div>
+
+
+                <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
+
+                  <p class="text-xs text-zinc-500">
+                    Avg Session
+                  </p>
+
+                  <div class="h-2 bg-violet-400/20 rounded mt-5 w-3/5"></div>
+
+                </div>
+
+              </div>
+
+
+              <div class="h-28 rounded-xl bg-white/[.03] border border-white/[.06] mt-3 p-4">
+
+                <svg
+                  viewBox="0 0 500 120"
+                  class="w-full h-full"
+                  aria-label="Engagement trend visualization"
+                >
+
+                  <polyline
+                    points="0,95 65,82 130,88 195,61 260,70 325,43 395,52 500,22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    class="text-violet-400"
+                  />
+
+                </svg>
+
+              </div>
+
+
+              <div class="flex flex-wrap gap-2 mt-4 text-xs text-zinc-500">
+
+                <span>Engagement vs Churn</span>
+                <span>•</span>
+                <span>Retention Cohorts</span>
+                <span>•</span>
+                <span>Customer Segments</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Dashboard Features -->
+
+          <div class="grid md:grid-cols-4 gap-3 mt-7">
+
+            <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
+
+              <p class="text-xs text-zinc-600">
+                Data Preparation
+              </p>
+
+              <p class="text-sm text-white font-medium mt-1">
+                Power Query
+              </p>
+
+            </div>
+
+
+            <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
+
+              <p class="text-xs text-zinc-600">
+                Data Model
+              </p>
+
+              <p class="text-sm text-white font-medium mt-1">
+                Relationships
+              </p>
+
+            </div>
+
+
+            <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
+
+              <p class="text-xs text-zinc-600">
+                Calculations
+              </p>
+
+              <p class="text-sm text-white font-medium mt-1">
+                DAX Measures
+              </p>
+
+            </div>
+
+
+            <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
+
+              <p class="text-xs text-zinc-600">
+                Interaction
+              </p>
+
+              <p class="text-sm text-white font-medium mt-1">
+                Slicers & Filters
+              </p>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- KEY FINDINGS -->
+
+        <article class="glass rounded-2xl p-7 mt-6">
 
           <div class="flex items-center gap-3">
 
-            <span class="text-violet-400 font-mono text-sm">
-              04
+            <span class="text-orange-400 font-mono text-sm">
+              05
             </span>
 
             <h3 class="text-2xl font-bold text-white">
-              Power BI Dashboard
+              Key Business Findings
             </h3>
 
           </div>
 
-          <p class="text-zinc-400 mt-2 leading-7 max-w-3xl">
-            A two-page interactive dashboard designed to help stakeholders
-            monitor revenue, customer churn and product engagement.
+          <p class="text-sm text-zinc-500 mt-2">
+
+            Findings will be based on the completed analysis of the project dataset.
+
           </p>
 
-        </div>
+
+          <div class="grid md:grid-cols-3 gap-4 mt-6">
 
 
-        <div class="flex gap-2">
+            <div class="rounded-2xl bg-white/[.03] border border-white/[.06] p-5">
 
-          <span class="rounded-lg bg-violet-400/10 border border-violet-400/20 px-3 py-2 text-xs font-semibold text-violet-300">
-            2 Pages
-          </span>
+              <span class="text-orange-400 text-xl font-bold">
+                01
+              </span>
 
-          <span class="rounded-lg bg-cyan-400/10 border border-cyan-400/20 px-3 py-2 text-xs font-semibold text-cyan-300">
-            Interactive
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <div class="grid lg:grid-cols-2 gap-6 mt-8">
-
-
-        <!-- PAGE 1 -->
-
-        <div class="rounded-2xl border border-white/[0.07] bg-zinc-950/60 p-5">
-
-          <div class="flex items-center justify-between">
-
-            <div>
-
-              <p class="text-xs font-mono text-cyan-400">
-                PAGE 01
-              </p>
-
-              <h4 class="text-xl font-bold text-white mt-1">
-                Executive Overview
+              <h4 class="text-lg font-bold text-white mt-4">
+                Churn Pattern
               </h4>
+
+              <p class="text-sm text-zinc-500 leading-6 mt-2">
+
+                Identify the customer segment or subscription plan
+                with the highest churn rate.
+
+              </p>
 
             </div>
 
-            <span class="text-xs text-zinc-600">
-              OVERVIEW
+
+            <div class="rounded-2xl bg-white/[.03] border border-white/[.06] p-5">
+
+              <span class="text-orange-400 text-xl font-bold">
+                02
+              </span>
+
+              <h4 class="text-lg font-bold text-white mt-4">
+                Engagement Pattern
+              </h4>
+
+              <p class="text-sm text-zinc-500 leading-6 mt-2">
+
+                Compare product activity between retained and churned
+                customers to identify meaningful engagement differences.
+
+              </p>
+
+            </div>
+
+
+            <div class="rounded-2xl bg-white/[.03] border border-white/[.06] p-5">
+
+              <span class="text-orange-400 text-xl font-bold">
+                03
+              </span>
+
+              <h4 class="text-lg font-bold text-white mt-4">
+                Revenue Impact
+              </h4>
+
+              <p class="text-sm text-zinc-500 leading-6 mt-2">
+
+                Quantify MRR associated with churned customers and identify
+                the segments contributing most to revenue loss.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT WORKFLOW -->
+
+        <div class="mt-8 rounded-2xl border border-cyan-400/10 bg-cyan-400/[.02] p-6">
+
+          <div class="flex flex-wrap items-center justify-center gap-3 text-sm">
+
+            <span class="font-semibold text-cyan-300">
+              Raw Data
+            </span>
+
+            <span class="text-zinc-600">→</span>
+
+            <span class="font-semibold text-white">
+              Python Cleaning
+            </span>
+
+            <span class="text-zinc-600">→</span>
+
+            <span class="font-semibold text-white">
+              SQL Analysis
+            </span>
+
+            <span class="text-zinc-600">→</span>
+
+            <span class="font-semibold text-white">
+              Power BI Modeling
+            </span>
+
+            <span class="text-zinc-600">→</span>
+
+            <span class="font-semibold text-violet-300">
+              Business Insights
             </span>
 
           </div>
 
-
-          <div class="grid grid-cols-2 gap-3 mt-5">
-
-            <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4">
-
-              <p class="text-[10px] uppercase text-zinc-600">
-                Total Customers
-              </p>
-
-              <p class="text-xl font-bold text-white mt-2">
-                KPI
-              </p>
-
-            </div>
+        </div>
 
 
-            <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4">
+        <!-- PROJECT LINKS -->
 
-              <p class="text-[10px] uppercase text-zinc-600">
-                Churn Rate
-              </p>
+        <div class="flex flex-wrap gap-3 mt-7">
 
-              <p class="text-xl font-bold text-white mt-2">
-                KPI
-              </p>
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+          >
+            View Project on GitHub ↗
+          </a>
 
-            </div>
+        </div>
 
+      </div>
 
-            <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4">
-
-              <p class="text-[10px] uppercase text-zinc-600">
-                MRR
-              </p>
-
-              <p class="text-xl font-bold text-white mt-2">
-                KPI
-              </p>
-
-            </div>
+    </section>
 
 
-            <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4">
+    <!-- =========================================================
+         EXPERIENCE
+    ========================================================== -->
 
-              <p class="text-[10px] uppercase text-zinc-600">
-                MRR Lost
-              </p>
+    <section id="experience" class="py-24 border-t border-white/[.06]">
 
-              <p class="text-xl font-bold text-white mt-2">
-                KPI
-              </p>
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
 
-            </div>
+        <div class="text-center max-w-2xl mx-auto">
 
-          </div>
+          <p class="text-sm uppercase tracking-[.25em] text-cyan-400 font-semibold">
+            Experience
+          </p>
 
+          <h2 class="text-4xl sm:text-5xl font-bold text-white mt-3">
+            Practical Experience
+          </h2>
 
-          <div class="h-28 rounded-xl bg-white/[0.03] border border-white/[0.06] mt-3 p-4 flex items-end gap-2">
+          <p class="text-zinc-400 mt-4 leading-7">
 
-            <div class="w-full h-[35%] rounded-t bg-cyan-400/20"></div>
-            <div class="w-full h-[48%] rounded-t bg-cyan-400/30"></div>
-            <div class="w-full h-[42%] rounded-t bg-cyan-400/25"></div>
-            <div class="w-full h-[67%] rounded-t bg-cyan-400/40"></div>
-            <div class="w-full h-[58%] rounded-t bg-cyan-400/35"></div>
-            <div class="w-full h-[82%] rounded-t bg-cyan-400/50"></div>
+            Practical software-development experience combined with
+            an analytics-focused technical skill set.
 
-          </div>
-
-
-          <div class="flex flex-wrap gap-2 mt-4 text-xs text-zinc-500">
-
-            <span>MRR Trend</span>
-            <span>•</span>
-            <span>Churn Trend</span>
-            <span>•</span>
-            <span>Plan Distribution</span>
-
-          </div>
+          </p>
 
         </div>
 
 
-        <!-- PAGE 2 -->
+        <div class="relative mt-16">
 
-        <div class="rounded-2xl border border-white/[0.07] bg-zinc-950/60 p-5">
+          <div class="absolute left-5 md:left-1/2 top-0 bottom-0 w-px timeline-line"></div>
 
-          <div class="flex items-center justify-between">
 
-            <div>
+          <!-- Internship -->
 
-              <p class="text-xs font-mono text-violet-400">
-                PAGE 02
+          <div class="relative grid md:grid-cols-2 gap-8">
+
+            <div class="md:text-right md:pr-12 pl-14 md:pl-0">
+
+              <p class="text-sm font-mono text-cyan-400">
+                INTERNSHIP
               </p>
 
-              <h4 class="text-xl font-bold text-white mt-1">
-                Engagement & Retention
-              </h4>
+              <h3 class="text-2xl font-bold text-white mt-2">
+                Web Development Intern
+              </h3>
 
-            </div>
-
-            <span class="text-xs text-zinc-600">
-              ANALYSIS
-            </span>
-
-          </div>
-
-
-          <div class="grid grid-cols-2 gap-3 mt-5">
-
-            <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4">
-
-              <p class="text-xs text-zinc-500">
-                Active Users
+              <p class="text-zinc-400 mt-1">
+                PAT Technologies Pvt. Ltd.
               </p>
-
-              <div class="h-2 bg-violet-400/20 rounded mt-5 w-4/5"></div>
 
             </div>
 
 
-            <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4">
+            <div class="pl-14 md:pl-12">
 
-              <p class="text-xs text-zinc-500">
-                Avg Session
-              </p>
+              <div class="glass rounded-2xl p-6">
 
-              <div class="h-2 bg-violet-400/20 rounded mt-5 w-3/5"></div>
+                <div class="absolute left-[13px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-cyan-400 ring-8 ring-cyan-400/10"></div>
+
+                <p class="text-sm text-zinc-400 leading-7">
+
+                  Gained practical experience in web application development,
+                  database integration, debugging, testing and feature
+                  enhancement while working with common software-development
+                  tools and technologies.
+
+                </p>
+
+
+                <div class="flex flex-wrap gap-2 mt-5">
+
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">HTML</span>
+                  <span class="skill-tag">CSS</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">MySQL</span>
+                  <span class="skill-tag">Git</span>
+
+                </div>
+
+              </div>
 
             </div>
-
-          </div>
-
-
-          <div class="h-28 rounded-xl bg-white/[0.03] border border-white/[0.06] mt-3 p-4">
-
-            <svg viewBox="0 0 500 120" class="w-full h-full">
-
-              <polyline
-                points="0,95 65,82 130,88 195,61 260,70 325,43 395,52 500,22"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                class="text-violet-400"
-              />
-
-            </svg>
-
-          </div>
-
-
-          <div class="flex flex-wrap gap-2 mt-4 text-xs text-zinc-500">
-
-            <span>Engagement vs Churn</span>
-            <span>•</span>
-            <span>Retention Cohorts</span>
-            <span>•</span>
-            <span>Customer Segments</span>
 
           </div>
 
@@ -752,192 +1702,316 @@
 
       </div>
 
+    </section>
 
-      <!-- Dashboard Features -->
 
-      <div class="grid md:grid-cols-4 gap-3 mt-7">
+    <!-- =========================================================
+         EDUCATION
+    ========================================================== -->
 
-        <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4">
+    <section id="education" class="py-24 border-t border-white/[.06]">
 
-          <p class="text-xs text-zinc-600">
-            Data Preparation
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
+
+        <div class="text-center max-w-2xl mx-auto">
+
+          <p class="text-sm uppercase tracking-[.25em] text-violet-400 font-semibold">
+            Education
           </p>
 
-          <p class="text-sm text-white font-medium mt-1">
-            Power Query
-          </p>
+          <h2 class="text-4xl sm:text-5xl font-bold text-white mt-3">
+            Academic Foundation
+          </h2>
 
-        </div>
+          <p class="text-zinc-400 mt-4 leading-7">
 
+            Strong academic performance in Computer Applications.
 
-        <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4">
-
-          <p class="text-xs text-zinc-600">
-            Data Model
-          </p>
-
-          <p class="text-sm text-white font-medium mt-1">
-            Relationships
-          </p>
-
-        </div>
-
-
-        <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4">
-
-          <p class="text-xs text-zinc-600">
-            Calculations
-          </p>
-
-          <p class="text-sm text-white font-medium mt-1">
-            DAX Measures
           </p>
 
         </div>
 
 
-        <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4">
+        <div class="relative mt-16">
 
-          <p class="text-xs text-zinc-600">
-            Interaction
-          </p>
+          <div class="absolute left-5 md:left-1/2 top-0 bottom-0 w-px timeline-line"></div>
 
-          <p class="text-sm text-white font-medium mt-1">
-            Slicers & Filters
-          </p>
+
+          <!-- MCA -->
+
+          <div class="relative grid md:grid-cols-2 gap-8 mb-14">
+
+            <div class="md:order-2 md:pl-12 pl-14">
+
+              <p class="text-sm font-mono text-violet-400">
+                POSTGRADUATE
+              </p>
+
+              <h3 class="text-2xl font-bold text-white mt-2">
+                Master of Computer Applications
+              </h3>
+
+              <p class="text-zinc-400 mt-1">
+                Atria Institute of Technology
+              </p>
+
+            </div>
+
+
+            <div class="md:order-1 md:text-right md:pr-12 pl-14 md:pl-0">
+
+              <div class="glass rounded-2xl p-6">
+
+                <div class="absolute left-[13px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-violet-400 ring-8 ring-violet-400/10"></div>
+
+                <p class="text-xs uppercase tracking-wider text-zinc-600">
+                  Academic Performance
+                </p>
+
+                <p class="text-4xl font-extrabold text-white mt-2">
+
+                  9.20
+
+                  <span class="text-sm font-medium text-zinc-500">
+                    CGPA
+                  </span>
+
+                </p>
+
+                <p class="text-sm text-zinc-500 mt-3">
+                  Computer Applications
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- BCA -->
+
+          <div class="relative grid md:grid-cols-2 gap-8">
+
+            <div class="md:text-right md:pr-12 pl-14 md:pl-0">
+
+              <p class="text-sm font-mono text-emerald-400">
+                UNDERGRADUATE
+              </p>
+
+              <h3 class="text-2xl font-bold text-white mt-2">
+                Bachelor of Computer Applications
+              </h3>
+
+              <p class="text-zinc-400 mt-1">
+                KWTs Divekar BCA College
+              </p>
+
+            </div>
+
+
+            <div class="pl-14 md:pl-12">
+
+              <div class="glass rounded-2xl p-6">
+
+                <div class="absolute left-[13px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-emerald-400 ring-8 ring-emerald-400/10"></div>
+
+                <p class="text-xs uppercase tracking-wider text-zinc-600">
+                  Academic Performance
+                </p>
+
+                <p class="text-4xl font-extrabold text-white mt-2">
+
+                  9.18
+
+                  <span class="text-sm font-medium text-zinc-500">
+                    CGPA
+                  </span>
+
+                </p>
+
+                <p class="text-sm text-zinc-500 mt-3">
+                  Bachelor of Computer Applications
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
 
       </div>
 
-    </article>
+    </section>
 
 
-    <!-- =====================================================
-         ANALYTICAL FINDINGS
-         IMPORTANT: Replace placeholder findings with the
-         actual findings after completing the analysis.
-    ====================================================== -->
+    <!-- =========================================================
+         CONTACT
+    ========================================================== -->
 
-    <article class="glass rounded-2xl p-7 mt-6">
+    <section id="contact" class="py-24 border-t border-white/[.06]">
 
-      <div class="flex items-center gap-3">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
 
-        <span class="text-orange-400 font-mono text-sm">
-          05
-        </span>
+        <div class="relative glass rounded-[2rem] p-8 sm:p-12 lg:p-16 overflow-hidden">
 
-        <h3 class="text-2xl font-bold text-white">
-          Key Business Findings
-        </h3>
+          <div class="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-cyan-400/10 blur-3xl"></div>
+
+          <div class="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-violet-400/10 blur-3xl"></div>
+
+
+          <div class="relative text-center">
+
+            <p class="text-sm uppercase tracking-[.25em] text-cyan-400 font-semibold">
+              Let's Work Together
+            </p>
+
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-white mt-4">
+              Have a data problem?
+            </h2>
+
+            <p class="text-zinc-400 text-lg leading-8 max-w-2xl mx-auto mt-5">
+
+              I'm open to entry-level Data Analyst opportunities where
+              I can use data to solve practical business problems and
+              create meaningful insights.
+
+            </p>
+
+
+            <div class="flex flex-wrap justify-center gap-3 mt-8">
+
+              <a
+                href="mailto:akankshanaik314@gmail.com"
+                class="rounded-xl bg-cyan-400 px-6 py-3 text-sm font-bold text-zinc-950 hover:bg-cyan-300 transition"
+              >
+                Send an Email
+              </a>
+
+              <a
+                href="tel:+917411421350"
+                class="rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+              >
+                Call Me
+              </a>
+
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+              >
+                LinkedIn ↗
+              </a>
+
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+
+            <div class="mt-9 text-sm text-zinc-500">
+
+              Bangalore, Karnataka ·
+
+              <a
+                href="mailto:akankshanaik314@gmail.com"
+                class="text-zinc-300 hover:text-cyan-400 transition"
+              >
+                akankshanaik314@gmail.com
+              </a>
+
+              ·
+
+              <a
+                href="tel:+917411421350"
+                class="text-zinc-300 hover:text-cyan-400 transition"
+              >
+                +91 74114 21350
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
-      <p class="text-sm text-zinc-500 mt-2">
-        Replace these placeholders with the actual findings from your dataset.
-      </p>
+    </section>
+
+  </main>
 
 
-      <div class="grid md:grid-cols-3 gap-4 mt-6">
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer class="border-t border-white/[.06]">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8">
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+
+        <p class="text-sm text-zinc-600">
+
+          © <span id="year"></span>
+          Akanksha U Naik. All rights reserved.
+
+        </p>
 
 
-        <div class="rounded-2xl bg-white/[0.03] border border-white/[0.06] p-5">
+        <div class="flex items-center gap-5 text-sm text-zinc-600">
 
-          <span class="text-orange-400 text-xl">
-            01
+          <a
+            href="#home"
+            class="hover:text-cyan-400 transition"
+          >
+            Back to top ↑
+          </a>
+
+          <span>
+            Data · Insights · Impact
           </span>
 
-          <h4 class="text-lg font-bold text-white mt-4">
-            Churn Pattern
-          </h4>
-
-          <p class="text-sm text-zinc-500 leading-6 mt-2">
-            Identify the customer segment or subscription plan with the
-            highest churn rate.
-          </p>
-
         </div>
-
-
-        <div class="rounded-2xl bg-white/[0.03] border border-white/[0.06] p-5">
-
-          <span class="text-orange-400 text-xl">
-            02
-          </span>
-
-          <h4 class="text-lg font-bold text-white mt-4">
-            Engagement Pattern
-          </h4>
-
-          <p class="text-sm text-zinc-500 leading-6 mt-2">
-            Compare product activity between retained and churned customers
-            to identify meaningful engagement differences.
-          </p>
-
-        </div>
-
-
-        <div class="rounded-2xl bg-white/[0.03] border border-white/[0.06] p-5">
-
-          <span class="text-orange-400 text-xl">
-            03
-          </span>
-
-          <h4 class="text-lg font-bold text-white mt-4">
-            Revenue Impact
-          </h4>
-
-          <p class="text-sm text-zinc-500 leading-6 mt-2">
-            Quantify the MRR associated with churned customers and identify
-            the segments contributing most to revenue loss.
-          </p>
-
-        </div>
-
-      </div>
-
-    </article>
-
-
-    <!-- =====================================================
-         PROJECT WORKFLOW
-    ====================================================== -->
-
-    <div class="mt-8 rounded-2xl border border-cyan-400/10 bg-cyan-400/[0.02] p-6">
-
-      <div class="flex flex-wrap items-center justify-center gap-3 text-sm">
-
-        <span class="font-semibold text-cyan-300">
-          Raw Data
-        </span>
-
-        <span class="text-zinc-600">→</span>
-
-        <span class="font-semibold text-white">
-          Python Cleaning
-        </span>
-
-        <span class="text-zinc-600">→</span>
-
-        <span class="font-semibold text-white">
-          SQL Analysis
-        </span>
-
-        <span class="text-zinc-600">→</span>
-
-        <span class="font-semibold text-white">
-          Power BI Modeling
-        </span>
-
-        <span class="text-zinc-600">→</span>
-
-        <span class="font-semibold text-violet-300">
-          Business Insights
-        </span>
 
       </div>
 
     </div>
 
-  </div>
-</section>
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+
+  <script>
+
+    // Dynamic copyright year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Close mobile navigation if you add one later
+    document.addEventListener("keydown", function(event) {
+
+      if (event.key === "Escape") {
+        document.activeElement?.blur();
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
+```
