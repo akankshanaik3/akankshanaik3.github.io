@@ -1,2923 +1,534 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <meta
-    name="description"
-    content="Akanksha U Naik — Data Analyst Portfolio | SQL, Power BI, Python and Advanced Excel"
-  />
-  <meta name="author" content="Akanksha U Naik" />
-  <meta name="theme-color" content="#09090b" />
-
-  <title>Akanksha U Naik | Data Analyst Portfolio</title>
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-            mono: ["JetBrains Mono", "Fira Code", "monospace"]
-          },
-          colors: {
-            ink: "#09090b",
-            panel: "#111113",
-            panel2: "#18181b",
-            accent: "#22d3ee",
-            accent2: "#a78bfa"
-          },
-          boxShadow: {
-            glow: "0 0 40px rgba(34,211,238,.12)",
-            card: "0 20px 60px rgba(0,0,0,.35)"
-          }
-        }
-      }
-    };
-  </script>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
-
-  <style>
-    html {
-      background: #09090b;
-      scroll-padding-top: 80px;
-    }
-
-    body {
-      background:
-        radial-gradient(circle at 15% 8%, rgba(34,211,238,.08), transparent 28%),
-        radial-gradient(circle at 85% 15%, rgba(167,139,250,.08), transparent 25%),
-        #09090b;
-    }
-
-    .grid-bg {
-      background-image:
-        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: linear-gradient(to bottom, black, transparent 90%);
-    }
-
-    .glass {
-      background: rgba(17,17,19,.72);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border: 1px solid rgba(255,255,255,.08);
-    }
-
-    .gradient-text {
-      background: linear-gradient(90deg,#67e8f9,#a78bfa);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .terminal {
-      background: #0c0c0e;
-      border: 1px solid rgba(255,255,255,.08);
-    }
-
-    .skill-tag {
-      display: inline-flex;
-      align-items: center;
-      border-radius: .5rem;
-      border: 1px solid rgba(255,255,255,.07);
-      background: rgba(255,255,255,.035);
-      padding: .35rem .55rem;
-      font-size: .7rem;
-      line-height: 1rem;
-      color: #a1a1aa;
-      transition: .2s ease;
-    }
-
-    .skill-tag:hover {
-      color: #e4e4e7;
-      border-color: rgba(34,211,238,.25);
-    }
-
-    .timeline-line {
-      background: linear-gradient(
-        to bottom,
-        #22d3ee,
-        #a78bfa,
-        rgba(255,255,255,.08)
-      );
-    }
-
-    .code-line {
-      counter-increment: line;
-    }
-
-    .code-line::before {
-      content: counter(line);
-      display: inline-block;
-      width: 2.2rem;
-      margin-right: 1rem;
-      color: #52525b;
-      text-align: right;
-      user-select: none;
-    }
-
-    .code-container {
-      counter-reset: line;
-    }
-
-    .project-card {
-      transition: transform .25s ease, border-color .25s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(34,211,238,.25);
-    }
-
-    .tab-active {
-      background: rgba(34,211,238,.12);
-      color: #67e8f9;
-      border-color: rgba(34,211,238,.25);
-    }
-
-    .filter-active {
-      background: #22d3ee;
-      color: #09090b;
-      border-color: #22d3ee;
-    }
-
-    .modal-backdrop {
-      background: rgba(0,0,0,.78);
-      backdrop-filter: blur(8px);
-    }
-
-    .chart-bar {
-      transition: height .5s ease;
-    }
-
-    .fade-in {
-      animation: fadeIn .5s ease both;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(8px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-      }
-    }
-
-    ::selection {
-      background: rgba(34,211,238,.25);
-      color: white;
-    }
-
-    :focus-visible {
-      outline: 2px solid #22d3ee;
-      outline-offset: 3px;
-    }
-  </style>
-</head>
-
-<body class="text-zinc-200 font-sans antialiased">
-
-  <!-- Background -->
-  <div class="fixed inset-0 -z-10 grid-bg pointer-events-none"></div>
-
-  <!-- Scroll Progress -->
-  <div
-    id="scrollProgress"
-    class="fixed top-0 left-0 h-1 bg-cyan-400 z-[100] transition-all"
-    style="width:0%"
-  ></div>
-
-  <!-- ================= NAVIGATION ================= -->
-
-  <header class="fixed top-0 left-0 right-0 z-50">
-
-    <nav class="glass border-x-0 border-t-0">
-
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-        <div class="h-16 flex items-center justify-between">
-
-          <a
-            href="#home"
-            class="font-bold tracking-tight text-white text-lg"
-          >
-            <span class="text-cyan-400">&lt;</span>
-            Akanksha
-            <span class="text-violet-400">/&gt;</span>
-          </a>
-
-          <!-- Desktop Navigation -->
-
-          <div class="hidden md:flex items-center gap-7 text-sm text-zinc-400">
-
-            <a href="#about" class="hover:text-cyan-400 transition">
-              About
-            </a>
-
-            <a href="#skills" class="hover:text-cyan-400 transition">
-              Skills
-            </a>
-
-            <a href="#projects" class="hover:text-cyan-400 transition">
-              Projects
-            </a>
-
-            <a href="#experience" class="hover:text-cyan-400 transition">
-              Experience
-            </a>
-
-            <a href="#education" class="hover:text-cyan-400 transition">
-              Education
-            </a>
-
-            <a href="#contact" class="hover:text-cyan-400 transition">
-              Contact
-            </a>
-
-          </div>
-
-          <div class="flex items-center gap-3">
-
-            <a
-              href="resume.pdf"
-              download
-              class="hidden sm:inline-flex items-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-300 hover:bg-cyan-400/20 transition"
-            >
-              Resume ↓
-            </a>
-
-            <!-- Mobile menu button -->
-
-            <button
-              id="menuBtn"
-              type="button"
-              aria-label="Open navigation menu"
-              aria-expanded="false"
-              class="md:hidden w-11 h-11 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center text-white"
-            >
-              ☰
-            </button>
-
-          </div>
-
-        </div>
-
-        <!-- Mobile Menu -->
-
-        <div
-          id="mobileMenu"
-          class="hidden md:hidden border-t border-white/10 py-4"
-        >
-
-          <div class="flex flex-col gap-2 text-sm">
-
-            <a href="#about" class="mobile-link px-4 py-3 rounded-lg hover:bg-white/5">
-              About
-            </a>
-
-            <a href="#skills" class="mobile-link px-4 py-3 rounded-lg hover:bg-white/5">
-              Skills
-            </a>
-
-            <a href="#projects" class="mobile-link px-4 py-3 rounded-lg hover:bg-white/5">
-              Projects
-            </a>
-
-            <a href="#experience" class="mobile-link px-4 py-3 rounded-lg hover:bg-white/5">
-              Experience
-            </a>
-
-            <a href="#education" class="mobile-link px-4 py-3 rounded-lg hover:bg-white/5">
-              Education
-            </a>
-
-            <a href="#contact" class="mobile-link px-4 py-3 rounded-lg hover:bg-white/5">
-              Contact
-            </a>
-
-            <a
-              href="resume.pdf"
-              download
-              class="px-4 py-3 text-cyan-300"
-            >
-              Download Resume ↓
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </nav>
-
-  </header>
-
-
-  <main id="home">
-
-    <!-- ================= HERO ================= -->
-
-    <section class="relative min-h-screen flex items-center pt-24">
-
-      <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
-
-        <div class="grid lg:grid-cols-[1.15fr_.85fr] gap-16 items-center">
-
-          <div>
-
-            <div
-              class="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/5 px-3 py-1.5 text-xs font-medium text-emerald-300 mb-7"
-            >
-              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              Open to Data Analyst Opportunities · Bangalore
-            </div>
-
-            <p class="text-sm uppercase tracking-[.3em] text-cyan-400 font-semibold mb-4">
-              Data Analyst Portfolio
-            </p>
-
-            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[.95] text-white">
-
-              Hi, I'm
-
-              <span class="gradient-text block mt-2">
-                Akanksha U Naik.
-              </span>
-
-            </h1>
-
-            <p class="mt-7 text-xl sm:text-2xl text-zinc-300 font-medium max-w-2xl">
-              Transforming Raw Data into Actionable Business Insights.
-            </p>
-
-            <p class="mt-5 text-base leading-7 text-zinc-400 max-w-2xl">
-              Aspiring Data Analyst with a strong foundation in SQL,
-              Advanced Excel and growing hands-on experience with Power BI
-              and Python for data analysis and visualization.
-            </p>
-
-            <div class="flex flex-wrap gap-3 mt-8">
-
-              <a
-                href="#projects"
-                class="inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-5 py-3 text-sm font-bold text-zinc-950 hover:bg-cyan-300 transition shadow-glow"
-              >
-                Explore My Work ↓
-              </a>
-
-              <a
-                href="mailto:akankshanaik314@gmail.com"
-                class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
-              >
-                Email Me
-              </a>
-
-              <a
-                href="https://linkedin.com/in/akankshanaik314"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
-              >
-                LinkedIn ↗
-              </a>
-
-            </div>
-
-            <div class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-zinc-500">
-
-              <span>📍 Bangalore, Karnataka</span>
-
-              <span>
-                ✉
-                <a
-                  href="mailto:akankshanaik314@gmail.com"
-                  class="hover:text-cyan-400"
-                >
-                  akankshanaik314@gmail.com
-                </a>
-              </span>
-
-              <span>
-                ☎
-                <a
-                  href="tel:+917411421350"
-                  class="hover:text-cyan-400"
-                >
-                  +91 74114 21350
-                </a>
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <!-- Profile -->
-
-          <div class="relative flex justify-center">
-
-            <div class="absolute w-72 h-72 rounded-full bg-cyan-400/10 blur-3xl"></div>
-
-            <div class="absolute w-56 h-56 rounded-full bg-violet-500/10 blur-3xl -bottom-10 -right-5"></div>
-
-            <div class="relative glass rounded-[2rem] p-8 w-full max-w-sm shadow-card">
-
-              <div class="absolute top-5 right-5 text-xs font-mono text-zinc-600">
-                01 / PROFILE
-              </div>
-
-              <div class="pt-5">
-
-                <img
-                  src="profile.jpg"
-                  class="rounded-full w-48 h-48 mx-auto object-cover border-4 border-white/10 shadow-2xl"
-                  alt="Akanksha U Naik"
-                />
-
-              </div>
-
-              <div class="text-center mt-7">
-
-                <h2 class="text-2xl font-bold text-white">
-                  Akanksha U Naik
-                </h2>
-
-                <p class="text-cyan-400 mt-1 font-medium">
-                  Aspiring Data Analyst
-                </p>
-
-                <p class="text-sm text-zinc-500 mt-2">
-                  Bangalore, Karnataka
-                </p>
-
-              </div>
-
-              <div class="grid grid-cols-2 gap-3 mt-7">
-
-                <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
-                  <p class="text-xs text-zinc-500">
-                    Core Skill
-                  </p>
-
-                  <p class="mt-1 font-semibold text-white">
-                    SQL
-                  </p>
-                </div>
-
-                <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
-                  <p class="text-xs text-zinc-500">
-                    BI Tool
-                  </p>
-
-                  <p class="mt-1 font-semibold text-white">
-                    Power BI
-                  </p>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= ABOUT ================= -->
-
-    <section
-      id="about"
-      class="py-24 border-t border-white/[.06]"
-    >
-
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-        <div class="grid lg:grid-cols-[.8fr_1.2fr] gap-12 items-start">
-
-          <div>
-
-            <p class="text-sm uppercase tracking-[.25em] text-cyan-400 font-semibold">
-              About Me
-            </p>
-
-            <h2 class="text-4xl sm:text-5xl font-bold text-white mt-3">
-              Turning questions into
-              <span class="gradient-text">
-                data-driven answers.
-              </span>
-            </h2>
-
-          </div>
-
-          <div class="text-zinc-400 leading-8 text-lg">
-
-            <p>
-              I'm an aspiring Data Analyst with a background in Computer
-              Applications and practical experience in software development.
-              I enjoy working with structured data, identifying patterns and
-              presenting information in a way that is easy for business teams
-              to understand.
-            </p>
-
-            <p class="mt-5">
-              My current analytics toolkit focuses on SQL, Advanced Excel,
-              Power BI and Python. I am continuously building hands-on
-              projects to strengthen my analytical thinking and dashboarding
-              skills.
-            </p>
-
-            <div class="grid sm:grid-cols-3 gap-4 mt-8">
-
-              <div class="glass rounded-xl p-5">
-                <p class="text-2xl font-bold text-white">
-                  SQL
-                </p>
-                <p class="text-xs text-zinc-500 mt-2">
-                  Data querying
-                </p>
-              </div>
-
-              <div class="glass rounded-xl p-5">
-                <p class="text-2xl font-bold text-white">
-                  BI
-                </p>
-                <p class="text-xs text-zinc-500 mt-2">
-                  Dashboards
-                </p>
-              </div>
-
-              <div class="glass rounded-xl p-5">
-                <p class="text-2xl font-bold text-white">
-                  Excel
-                </p>
-                <p class="text-xs text-zinc-500 mt-2">
-                  Business analysis
-                </p>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= SKILLS ================= -->
-
-    <section
-      id="skills"
-      class="py-24 border-t border-white/[.06]"
-    >
-
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-        <div class="max-w-2xl mb-12">
-
-          <p class="text-sm uppercase tracking-[.25em] text-cyan-400 font-semibold">
-            Technical Stack
-          </p>
-
-          <h2 class="text-4xl sm:text-5xl font-bold text-white mt-3">
-            Tools I use to
-            <span class="gradient-text">
-              analyze data.
-            </span>
-          </h2>
-
-        </div>
-
-
-        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
-
-          <!-- SQL -->
-
-          <article class="glass rounded-2xl p-6">
-
-            <div class="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-300 font-bold">
-              SQL
-            </div>
-
-            <h3 class="text-xl font-bold text-white mt-6">
-              SQL
-            </h3>
-
-            <p class="text-sm text-zinc-500 mt-2 leading-6">
-              Querying and analyzing relational datasets.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mt-5">
-              <span class="skill-tag">Joins</span>
-              <span class="skill-tag">CTEs</span>
-              <span class="skill-tag">Window Functions</span>
-              <span class="skill-tag">Aggregations</span>
-            </div>
-
-          </article>
-
-
-          <!-- Power BI -->
-
-          <article class="glass rounded-2xl p-6">
-
-            <div class="w-12 h-12 rounded-xl bg-violet-400/10 border border-violet-400/20 flex items-center justify-center text-violet-300 font-bold">
-              BI
-            </div>
-
-            <h3 class="text-xl font-bold text-white mt-6">
-              Power BI
-            </h3>
-
-            <p class="text-sm text-zinc-500 mt-2 leading-6">
-              Building dashboards and exploring analytical models.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mt-5">
-              <span class="skill-tag">Power Query</span>
-              <span class="skill-tag">DAX</span>
-              <span class="skill-tag">Data Modeling</span>
-              <span class="skill-tag">Dashboards</span>
-            </div>
-
-          </article>
-
-
-          <!-- Python -->
-
-          <article class="glass rounded-2xl p-6">
-
-            <div class="w-12 h-12 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center text-yellow-300 font-bold">
-              Py
-            </div>
-
-            <h3 class="text-xl font-bold text-white mt-6">
-              Python
-            </h3>
-
-            <p class="text-sm text-zinc-500 mt-2 leading-6">
-              Basic data preparation and analytical programming.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mt-5">
-              <span class="skill-tag">Pandas</span>
-              <span class="skill-tag">NumPy</span>
-              <span class="skill-tag">Matplotlib</span>
-              <span class="skill-tag">Cleaning</span>
-            </div>
-
-          </article>
-
-
-          <!-- Excel -->
-
-          <article class="glass rounded-2xl p-6">
-
-            <div class="w-12 h-12 rounded-xl bg-emerald-400/10 border border-emerald-400/20 flex items-center justify-center text-emerald-300 font-bold">
-              X
-            </div>
-
-            <h3 class="text-xl font-bold text-white mt-6">
-              Advanced Excel
-            </h3>
-
-            <p class="text-sm text-zinc-500 mt-2 leading-6">
-              Spreadsheet analysis, reporting and KPI tracking.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mt-5">
-              <span class="skill-tag">XLOOKUP</span>
-              <span class="skill-tag">Pivot Tables</span>
-              <span class="skill-tag">Power Query</span>
-              <span class="skill-tag">KPI Analysis</span>
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= PROJECTS ================= -->
-
-    <section
-      id="projects"
-      class="py-24 border-t border-white/[.06]"
-    >
-
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-
-          <div>
-
-            <p class="text-sm uppercase tracking-[.25em] text-cyan-400 font-semibold">
-              Portfolio
-            </p>
-
-            <h2 class="text-4xl sm:text-5xl font-bold text-white mt-3">
-              Featured
-              <span class="gradient-text">
-                Projects.
-              </span>
-            </h2>
-
-            <p class="text-zinc-400 mt-4 max-w-2xl leading-7">
-              A focused collection of analytics projects demonstrating
-              SQL, Excel, Python and Power BI skills.
-            </p>
-
-          </div>
-
-
-          <!-- Filters -->
-
-          <div class="flex flex-wrap gap-2">
-
-            <button
-              type="button"
-              class="project-filter filter-active rounded-lg border px-4 py-2 text-sm"
-              data-filter="all"
-            >
-              All
-            </button>
-
-            <button
-              type="button"
-              class="project-filter rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-400"
-              data-filter="sql"
-            >
-              SQL
-            </button>
-
-            <button
-              type="button"
-              class="project-filter rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-400"
-              data-filter="excel"
-            >
-              Excel
-            </button>
-
-            <button
-              type="button"
-              class="project-filter rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-400"
-              data-filter="powerbi"
-            >
-              Power BI
-            </button>
-
-          </div>
-
-        </div>
-
-
-        <!-- Project Grid -->
-
-        <div
-          id="projectGrid"
-          class="grid lg:grid-cols-3 gap-6 mt-12"
-        >
-
-          <!-- PROJECT 1 -->
-
-          <article
-            class="project-card glass rounded-2xl overflow-hidden"
-            data-category="sql powerbi"
-          >
-
-            <div class="p-6">
-
-              <div class="flex items-center justify-between">
-
-                <span class="text-xs font-mono text-cyan-400">
-                  PROJECT 01
-                </span>
-
-                <span class="skill-tag">
-                  Featured
-                </span>
-
-              </div>
-
-              <h3 class="text-2xl font-bold text-white mt-6">
-                SaaS User Engagement
-                <span class="gradient-text">
-                  & Churn Analysis
-                </span>
-              </h3>
-
-              <p class="text-sm text-zinc-400 leading-6 mt-4">
-                Analyze customer engagement, subscription behavior,
-                churn patterns and recurring revenue.
-              </p>
-
-              <div class="flex flex-wrap gap-2 mt-5">
-
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Power BI</span>
-
-              </div>
-
-              <button
-                type="button"
-                class="project-details mt-7 w-full rounded-xl bg-cyan-400 px-4 py-3 text-sm font-bold text-zinc-950 hover:bg-cyan-300 transition"
-                data-project="saas"
-              >
-                View Case Study →
-              </button>
-
-            </div>
-
-          </article>
-
-
-          <!-- PROJECT 2 -->
-
-          <article
-            class="project-card glass rounded-2xl overflow-hidden"
-            data-category="excel"
-          >
-
-            <div class="p-6">
-
-              <div class="flex items-center justify-between">
-
-                <span class="text-xs font-mono text-emerald-400">
-                  PROJECT 02
-                </span>
-
-                <span class="skill-tag">
-                  Completed
-                </span>
-
-              </div>
-
-              <h3 class="text-2xl font-bold text-white mt-6">
-                Excel Sales
-                <span class="gradient-text">
-                  Dashboard
-                </span>
-              </h3>
-
-              <p class="text-sm text-zinc-400 leading-6 mt-4">
-                Interactive sales reporting dashboard using spreadsheet
-                analysis, KPIs, Pivot Tables and business trends.
-              </p>
-
-              <div class="flex flex-wrap gap-2 mt-5">
-
-                <span class="skill-tag">Excel</span>
-                <span class="skill-tag">Pivot Tables</span>
-                <span class="skill-tag">XLOOKUP</span>
-                <span class="skill-tag">KPIs</span>
-
-              </div>
-
-              <button
-                type="button"
-                class="project-details mt-7 w-full rounded-xl border border-emerald-400/20 bg-emerald-400/10 px-4 py-3 text-sm font-semibold text-emerald-300 hover:bg-emerald-400/20 transition"
-                data-project="excel"
-              >
-                View Project →
-              </button>
-
-            </div>
-
-          </article>
-
-
-          <!-- PROJECT 3 -->
-
-          <article
-            class="project-card glass rounded-2xl overflow-hidden"
-            data-category="sql"
-          >
-
-            <div class="p-6">
-
-              <div class="flex items-center justify-between">
-
-                <span class="text-xs font-mono text-violet-400">
-                  PROJECT 03
-                </span>
-
-                <span class="skill-tag">
-                  SQL
-                </span>
-
-              </div>
-
-              <h3 class="text-2xl font-bold text-white mt-6">
-                Retail Sales
-                <span class="gradient-text">
-                  SQL Analysis
-                </span>
-              </h3>
-
-              <p class="text-sm text-zinc-400 leading-6 mt-4">
-                SQL-based analysis of customer purchases, sales trends,
-                product performance and revenue patterns.
-              </p>
-
-              <div class="flex flex-wrap gap-2 mt-5">
-
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">CTEs</span>
-                <span class="skill-tag">Window Functions</span>
-                <span class="skill-tag">Joins</span>
-
-              </div>
-
-              <button
-                type="button"
-                class="project-details mt-7 w-full rounded-xl border border-violet-400/20 bg-violet-400/10 px-4 py-3 text-sm font-semibold text-violet-300 hover:bg-violet-400/20 transition"
-                data-project="retail"
-              >
-                View Project →
-              </button>
-
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= FEATURED CASE STUDY ================= -->
-
-    <section
-      id="case-study"
-      class="py-24 border-t border-white/[.06]"
-    >
-
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-        <div class="max-w-4xl">
-
-          <span class="inline-flex items-center rounded-full border border-violet-400/20 bg-violet-400/5 px-3 py-1.5 text-xs text-violet-300">
-            FEATURED CASE STUDY
-          </span>
-
-          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mt-5">
-            SaaS Product User
-            <span class="gradient-text">
-              Engagement & Churn Analysis
-            </span>
-          </h2>
-
-          <p class="text-zinc-400 text-lg leading-8 mt-6">
-            An end-to-end portfolio case study designed to understand
-            customer engagement, subscription behavior and churn.
-          </p>
-
-        </div>
-
-
-        <!-- KPI Concepts -->
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
-
-          <div class="glass rounded-2xl p-6">
-            <p class="text-xs uppercase tracking-wider text-zinc-500">
-              KPI
-            </p>
-
-            <p class="text-2xl font-bold text-white mt-3">
-              Churn Rate
-            </p>
-
-            <p class="text-sm text-zinc-500 mt-2">
-              Customers lost relative to the customer base.
-            </p>
-          </div>
-
-          <div class="glass rounded-2xl p-6">
-            <p class="text-xs uppercase tracking-wider text-zinc-500">
-              Revenue
-            </p>
-
-            <p class="text-2xl font-bold text-white mt-3">
-              MRR
-            </p>
-
-            <p class="text-sm text-zinc-500 mt-2">
-              Monthly recurring revenue.
-            </p>
-          </div>
-
-          <div class="glass rounded-2xl p-6">
-            <p class="text-xs uppercase tracking-wider text-zinc-500">
-              Engagement
-            </p>
-
-            <p class="text-2xl font-bold text-white mt-3">
-              DAU / WAU
-            </p>
-
-            <p class="text-sm text-zinc-500 mt-2">
-              Active-user behavior over time.
-            </p>
-          </div>
-
-          <div class="glass rounded-2xl p-6">
-            <p class="text-xs uppercase tracking-wider text-zinc-500">
-              Retention
-            </p>
-
-            <p class="text-2xl font-bold text-white mt-3">
-              Cohorts
-            </p>
-
-            <p class="text-sm text-zinc-500 mt-2">
-              Retention patterns by signup group.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- Business Case -->
-
-        <div class="grid lg:grid-cols-2 gap-6 mt-6">
-
-          <article class="glass rounded-2xl p-7">
-
-            <div class="flex items-center gap-3">
-
-              <span class="text-cyan-400 font-mono text-sm">
-                01
-              </span>
-
-              <h3 class="text-2xl font-bold text-white">
-                Business Case
-              </h3>
-
-            </div>
-
-            <p class="text-zinc-400 leading-7 mt-5">
-              SaaS businesses depend on recurring customers. This analysis
-              focuses on understanding customer engagement, subscription
-              behavior and patterns associated with churn.
-            </p>
-
-            <div class="mt-6 space-y-3 text-sm text-zinc-400">
-
-              <div class="flex gap-3">
-                <span class="text-cyan-400">→</span>
-                Identify churned customers.
-              </div>
-
-              <div class="flex gap-3">
-                <span class="text-cyan-400">→</span>
-                Analyze engagement before churn.
-              </div>
-
-              <div class="flex gap-3">
-                <span class="text-cyan-400">→</span>
-                Measure recurring revenue associated with customers.
-              </div>
-
-              <div class="flex gap-3">
-                <span class="text-cyan-400">→</span>
-                Identify customer segments requiring attention.
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="glass rounded-2xl p-7">
-
-            <div class="flex items-center gap-3">
-
-              <span class="text-violet-400 font-mono text-sm">
-                02
-              </span>
-
-              <h3 class="text-2xl font-bold text-white">
-                Analytical Questions
-              </h3>
-
-            </div>
-
-            <div class="grid sm:grid-cols-2 gap-3 mt-6">
-
-              <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
-                <p class="text-sm font-semibold text-white">
-                  Who is churning?
-                </p>
-
-                <p class="text-xs text-zinc-500 mt-2">
-                  Segment customers by plan, tenure and activity.
-                </p>
-              </div>
-
-              <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
-                <p class="text-sm font-semibold text-white">
-                  What patterns exist?
-                </p>
-
-                <p class="text-xs text-zinc-500 mt-2">
-                  Compare engagement between customer groups.
-                </p>
-              </div>
-
-              <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
-                <p class="text-sm font-semibold text-white">
-                  What revenue is exposed?
-                </p>
-
-                <p class="text-xs text-zinc-500 mt-2">
-                  Quantify MRR associated with churned customers.
-                </p>
-              </div>
-
-              <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
-                <p class="text-sm font-semibold text-white">
-                  Where should teams act?
-                </p>
-
-                <p class="text-xs text-zinc-500 mt-2">
-                  Highlight segments requiring further investigation.
-                </p>
-              </div>
-
-            </div>
-
-          </article>
-
-        </div>
-
-
-        <!-- DATA MODEL -->
-
-        <article class="glass rounded-2xl p-7 mt-6">
-
-          <div class="flex items-center gap-3">
-
-            <span class="text-emerald-400 font-mono text-sm">
-              03
-            </span>
-
-            <h3 class="text-2xl font-bold text-white">
-              Dataset & Data Model
-            </h3>
-
-          </div>
-
-          <p class="text-sm text-zinc-500 mt-2">
-            Three related datasets connect customer information,
-            product activity and subscription revenue.
-          </p>
-
-
-          <div class="grid lg:grid-cols-3 gap-5 mt-7">
-
-            <div class="rounded-2xl bg-zinc-950/80 border border-white/[.07] overflow-hidden">
-
-              <div class="px-5 py-4 border-b border-white/[.06] flex justify-between">
-
-                <span class="font-mono text-sm font-semibold text-cyan-300">
-                  users
-                </span>
-
-                <span class="text-xs text-zinc-600">
-                  TABLE 01
-                </span>
-
-              </div>
-
-              <div class="p-5 font-mono text-xs space-y-3 text-zinc-400">
-
-                <div>
-                  <span class="text-violet-300">user_id</span>
-                  · PK
-                </div>
-
-                <div>
-                  <span class="text-violet-300">signup_date</span>
-                  · DATE
-                </div>
-
-                <div>
-                  <span class="text-violet-300">country</span>
-                  · VARCHAR
-                </div>
-
-                <div>
-                  <span class="text-violet-300">plan_type</span>
-                  · VARCHAR
-                </div>
-
-                <div>
-                  <span class="text-violet-300">status</span>
-                  · VARCHAR
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="rounded-2xl bg-zinc-950/80 border border-white/[.07] overflow-hidden">
-
-              <div class="px-5 py-4 border-b border-white/[.06] flex justify-between">
-
-                <span class="font-mono text-sm font-semibold text-violet-300">
-                  product_events
-                </span>
-
-                <span class="text-xs text-zinc-600">
-                  TABLE 02
-                </span>
-
-              </div>
-
-              <div class="p-5 font-mono text-xs space-y-3 text-zinc-400">
-
-                <div>
-                  <span class="text-violet-300">event_id</span>
-                  · PK
-                </div>
-
-                <div>
-                  <span class="text-violet-300">user_id</span>
-                  · FK
-                </div>
-
-                <div>
-                  <span class="text-violet-300">event_date</span>
-                  · TIMESTAMP
-                </div>
-
-                <div>
-                  <span class="text-violet-300">event_name</span>
-                  · VARCHAR
-                </div>
-
-                <div>
-                  <span class="text-violet-300">session_minutes</span>
-                  · INTEGER
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="rounded-2xl bg-zinc-950/80 border border-white/[.07] overflow-hidden">
-
-              <div class="px-5 py-4 border-b border-white/[.06] flex justify-between">
-
-                <span class="font-mono text-sm font-semibold text-emerald-300">
-                  subscriptions
-                </span>
-
-                <span class="text-xs text-zinc-600">
-                  TABLE 03
-                </span>
-
-              </div>
-
-              <div class="p-5 font-mono text-xs space-y-3 text-zinc-400">
-
-                <div>
-                  <span class="text-violet-300">subscription_id</span>
-                  · PK
-                </div>
-
-                <div>
-                  <span class="text-violet-300">user_id</span>
-                  · FK
-                </div>
-
-                <div>
-                  <span class="text-violet-300">start_date</span>
-                  · DATE
-                </div>
-
-                <div>
-                  <span class="text-violet-300">end_date</span>
-                  · DATE
-                </div>
-
-                <div>
-                  <span class="text-violet-300">mrr</span>
-                  · DECIMAL
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <!-- CODE TABS -->
-
-        <article class="glass rounded-2xl overflow-hidden mt-6">
-
-          <div class="p-5 border-b border-white/[.06]">
-
-            <div class="flex flex-wrap gap-2">
-
-              <button
-                type="button"
-                class="code-tab tab-active rounded-lg border px-4 py-2 text-sm"
-                data-tab="sql"
-              >
-                SQL Analysis
-              </button>
-
-              <button
-                type="button"
-                class="code-tab rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-400"
-                data-tab="python"
-              >
-                Python Cleaning
-              </button>
-
-              <button
-                type="button"
-                class="code-tab rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-400"
-                data-tab="dax"
-              >
-                DAX KPI
-              </button>
-
-            </div>
-
-          </div>
-
-
-          <!-- SQL -->
-
-          <div
-            id="code-sql"
-            class="code-panel p-5 overflow-x-auto"
-          >
-
-<pre class="terminal rounded-xl p-5 font-mono text-xs sm:text-sm leading-7 text-zinc-300"><code><span class="text-violet-400">WITH</span> latest_subscription <span class="text-violet-400">AS</span> (
-
-  <span class="text-violet-400">SELECT</span>
-    user_id,
-    end_date,
-    mrr,
-
-    <span class="text-yellow-300">ROW_NUMBER()</span> <span class="text-violet-400">OVER</span> (
-      <span class="text-violet-400">PARTITION BY</span> user_id
-      <span class="text-violet-400">ORDER BY</span> end_date <span class="text-violet-400">DESC</span>
-    ) <span class="text-violet-400">AS</span> rn
-
-  <span class="text-violet-400">FROM</span> subscriptions
-)
-
-<span class="text-violet-400">SELECT</span>
-  u.user_id,
-  u.plan_type,
-  s.end_date,
-  s.mrr
-
-<span class="text-violet-400">FROM</span> users u
-
-<span class="text-violet-400">JOIN</span> latest_subscription s
-  <span class="text-violet-400">ON</span> u.user_id = s.user_id
-
-<span class="text-violet-400">WHERE</span> s.rn = 1
-  <span class="text-violet-400">AND</span> s.end_date &lt; <span class="text-yellow-300">CURRENT_DATE</span>
-
-<span class="text-violet-400">ORDER BY</span> s.mrr <span class="text-violet-400">DESC</span>;</code></pre>
-
-          </div>
-
-
-          <!-- PYTHON -->
-
-          <div
-            id="code-python"
-            class="code-panel hidden p-5 overflow-x-auto"
-          >
-
-<pre class="terminal rounded-xl p-5 font-mono text-xs sm:text-sm leading-7 text-zinc-300"><code><span class="text-violet-400">import</span> pandas <span class="text-violet-400">as</span> pd
-
-df = pd.read_csv(<span class="text-green-300">"product_events.csv"</span>)
-
-<span class="text-zinc-500"># Normalize column names</span>
-df.columns = (
-    df.columns
-      .str.strip()
-      .str.lower()
-      .str.replace(<span class="text-green-300">" "</span>, <span class="text-green-300">"_"</span>)
-)
-
-<span class="text-zinc-500"># Convert event dates</span>
-df[<span class="text-green-300">"event_date"</span>] = pd.to_datetime(
-    df[<span class="text-green-300">"event_date"</span>],
-    errors=<span class="text-green-300">"coerce"</span>
-)
-
-<span class="text-zinc-500"># Remove duplicate events</span>
-df = df.drop_duplicates()
-
-<span class="text-zinc-500"># Handle missing session duration</span>
-df[<span class="text-green-300">"session_minutes"</span>] = (
-    df[<span class="text-green-300">"session_minutes"</span>]
-      .fillna(0)
-)</code></pre>
-
-          </div>
-
-
-          <!-- DAX -->
-
-          <div
-            id="code-dax"
-            class="code-panel hidden p-5 overflow-x-auto"
-          >
-
-<pre class="terminal rounded-xl p-5 font-mono text-xs sm:text-sm leading-7 text-zinc-300"><code><span class="text-zinc-500">-- Example Power BI measure</span>
-
-<span class="text-violet-400">MRR</span> =
-<span class="text-yellow-300">SUM</span>(
-    subscriptions[mrr]
-)
-
-<span class="text-violet-400">Churned Customers</span> =
-<span class="text-yellow-300">CALCULATE</span>(
-    <span class="text-yellow-300">DISTINCTCOUNT</span>(
-        users[user_id]
-    ),
-    users[status] = <span class="text-green-300">"Churned"</span>
-)
-
-<span class="text-violet-400">Churn Rate</span> =
-<span class="text-yellow-300">DIVIDE</span>(
-    [Churned Customers],
-    [Total Customers],
-    0
-)</code></pre>
-
-          </div>
-
-        </article>
-
-
-        <!-- POWER BI PREVIEW -->
-
-        <article class="glass rounded-2xl p-7 mt-6">
-
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
-
-            <div>
-
-              <p class="text-xs font-mono text-violet-400">
-                POWER BI
-              </p>
-
-              <h3 class="text-2xl font-bold text-white mt-1">
-                Dashboard Preview
-              </h3>
-
-              <p class="text-zinc-400 mt-2">
-                Interactive prototype representing the planned analytical dashboard.
-              </p>
-
-            </div>
-
-            <div class="flex gap-2">
-
-              <button
-                type="button"
-                class="dashboard-tab tab-active rounded-lg border px-4 py-2 text-sm"
-                data-dashboard="overview"
-              >
-                Overview
-              </button>
-
-              <button
-                type="button"
-                class="dashboard-tab rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-400"
-                data-dashboard="retention"
-              >
-                Retention
-              </button>
-
-            </div>
-
-          </div>
-
-
-          <!-- Dashboard -->
-
-          <div class="rounded-2xl border border-white/[.07] bg-zinc-950/70 p-5 mt-7">
-
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
-
-              <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
-
-                <p class="text-xs text-zinc-600">
-                  MRR
-                </p>
-
-                <p
-                  id="dashMrr"
-                  class="text-2xl font-bold text-white mt-2"
-                >
-                  — 
-                </p>
-
-                <p class="text-xs text-zinc-600 mt-1">
-                  Connect real dataset
-                </p>
-
-              </div>
-
-
-              <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
-
-                <p class="text-xs text-zinc-600">
-                  Churn
-                </p>
-
-                <p
-                  id="dashChurn"
-                  class="text-2xl font-bold text-white mt-2"
-                >
-                  —
-                </p>
-
-                <p class="text-xs text-zinc-600 mt-1">
-                  Add calculated result
-                </p>
-
-              </div>
-
-
-              <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
-
-                <p class="text-xs text-zinc-600">
-                  Customers
-                </p>
-
-                <p
-                  id="dashCustomers"
-                  class="text-2xl font-bold text-white mt-2"
-                >
-                  —
-                </p>
-
-                <p class="text-xs text-zinc-600 mt-1">
-                  From dataset
-                </p>
-
-              </div>
-
-
-              <div class="rounded-xl bg-white/[.03] border border-white/[.06] p-4">
-
-                <p class="text-xs text-zinc-600">
-                  Retention
-                </p>
-
-                <p
-                  id="dashRetention"
-                  class="text-2xl font-bold text-white mt-2"
-                >
-                  —
-                </p>
-
-                <p class="text-xs text-zinc-600 mt-1">
-                  From cohort analysis
-                </p>
-
-              </div>
-
-            </div>
-
-
-            <!-- Chart -->
-
-            <div class="mt-5 rounded-xl bg-white/[.03] border border-white/[.06] p-5">
-
-              <div class="flex items-center justify-between mb-6">
-
-                <div>
-
-                  <p class="text-sm font-semibold text-white">
-                    Analytical Trend
-                  </p>
-
-                  <p
-                    id="dashboardLabel"
-                    class="text-xs text-zinc-600 mt-1"
-                  >
-                    Preview only
-                  </p>
-
-                </div>
-
-                <span class="text-xs text-violet-300">
-                  Power BI concept
-                </span>
-
-              </div>
-
-
-              <div
-                id="chartBars"
-                class="h-48 flex items-end gap-3"
-              >
-
-                <div class="chart-bar flex-1 rounded-t bg-cyan-400/20" style="height:30%"></div>
-                <div class="chart-bar flex-1 rounded-t bg-cyan-400/25" style="height:45%"></div>
-                <div class="chart-bar flex-1 rounded-t bg-cyan-400/30" style="height:38%"></div>
-                <div class="chart-bar flex-1 rounded-t bg-cyan-400/35" style="height:60%"></div>
-                <div class="chart-bar flex-1 rounded-t bg-cyan-400/40" style="height:52%"></div>
-                <div class="chart-bar flex-1 rounded-t bg-cyan-400/45" style="height:72%"></div>
-                <div class="chart-bar flex-1 rounded-t bg-cyan-400/50" style="height:65%"></div>
-
-              </div>
-
-            </div>
-
-
-            <div class="grid md:grid-cols-4 gap-3 mt-4">
-
-              <div class="rounded-xl bg-white/[.03] p-4">
-                <p class="text-xs text-zinc-600">
-                  Model
-                </p>
-
-                <p class="text-sm text-white font-medium mt-1">
-                  Star Schema
-                </p>
-              </div>
-
-              <div class="rounded-xl bg-white/[.03] p-4">
-                <p class="text-xs text-zinc-600">
-                  Interaction
-                </p>
-
-                <p class="text-sm text-white font-medium mt-1">
-                  Slicers
-                </p>
-              </div>
-
-              <div class="rounded-xl bg-white/[.03] p-4">
-                <p class="text-xs text-zinc-600">
-                  Measures
-                </p>
-
-                <p class="text-sm text-white font-medium mt-1">
-                  DAX KPIs
-                </p>
-              </div>
-
-              <div class="rounded-xl bg-white/[.03] p-4">
-                <p class="text-xs text-zinc-600">
-                  Story
-                </p>
-
-                <p class="text-sm text-white font-medium mt-1">
-                  Insights
-                </p>
-              </div>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <!-- WORKFLOW -->
-
-        <div class="grid md:grid-cols-5 gap-3 mt-6">
-
-          <div class="glass rounded-xl p-5">
-            <p class="text-xs text-cyan-400 font-mono">
-              01
-            </p>
-
-            <p class="text-sm font-semibold text-white mt-2">
-              Raw Data
-            </p>
-          </div>
-
-          <div class="glass rounded-xl p-5">
-            <p class="text-xs text-cyan-400 font-mono">
-              02
-            </p>
-
-            <p class="text-sm font-semibold text-white mt-2">
-              Cleaning
-            </p>
-          </div>
-
-          <div class="glass rounded-xl p-5">
-            <p class="text-xs text-cyan-400 font-mono">
-              03
-            </p>
-
-            <p class="text-sm font-semibold text-white mt-2">
-              SQL Analysis
-            </p>
-          </div>
-
-          <div class="glass rounded-xl p-5">
-            <p class="text-xs text-cyan-400 font-mono">
-              04
-            </p>
-
-            <p class="text-sm font-semibold text-white mt-2">
-              Power BI
-            </p>
-          </div>
-
-          <div class="glass rounded-xl p-5">
-            <p class="text-xs text-cyan-400 font-mono">
-              05
-            </p>
-
-            <p class="text-sm font-semibold text-white mt-2">
-              Insights
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= EXPERIENCE ================= -->
-
-    <section
-      id="experience"
-      class="py-24 border-t border-white/[.06]"
-    >
-
-      <div class="max-w-5xl mx-auto px-6 lg:px-8">
-
-        <div class="text-center max-w-2xl mx-auto">
-
-          <p class="text-sm uppercase tracking-[.25em] text-cyan-400 font-semibold">
-            Experience
-          </p>
-
-          <h2 class="text-4xl sm:text-5xl font-bold text-white mt-3">
-            Practical Experience
-          </h2>
-
-        </div>
-
-
-        <div class="relative mt-16">
-
-          <div class="absolute left-5 md:left-1/2 top-0 bottom-0 w-px timeline-line"></div>
-
-
-          <div class="relative grid md:grid-cols-2 gap-8 mb-16">
-
-            <div class="md:text-right md:pr-12 pl-14 md:pl-0">
-
-              <p class="text-sm font-mono text-cyan-400">
-                INTERNSHIP
-              </p>
-
-              <h3 class="text-2xl font-bold text-white mt-2">
-                Web Development Intern
-              </h3>
-
-              <p class="text-zinc-400 mt-1">
-                PAT Technologies Pvt. Ltd.
-              </p>
-
-            </div>
-
-
-            <div class="pl-14 md:pl-12">
-
-              <div class="glass rounded-2xl p-6 relative">
-
-                <div class="absolute left-[13px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-cyan-400 ring-8 ring-cyan-400/10"></div>
-
-                <p class="text-sm text-zinc-400 leading-7">
-                  Worked on web development activities involving application
-                  development, database integration, debugging, testing and
-                  feature enhancement while gaining practical exposure to
-                  software development workflows.
-                </p>
-
-                <div class="flex flex-wrap gap-2 mt-5">
-
-                  <span class="skill-tag">Python</span>
-                  <span class="skill-tag">HTML</span>
-                  <span class="skill-tag">CSS</span>
-                  <span class="skill-tag">JavaScript</span>
-                  <span class="skill-tag">MySQL</span>
-                  <span class="skill-tag">Git</span>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= EDUCATION ================= -->
-
-    <section
-      id="education"
-      class="py-24 border-t border-white/[.06]"
-    >
-
-      <div class="max-w-5xl mx-auto px-6 lg:px-8">
-
-        <div class="text-center max-w-2xl mx-auto">
-
-          <p class="text-sm uppercase tracking-[.25em] text-violet-400 font-semibold">
-            Education
-          </p>
-
-          <h2 class="text-4xl sm:text-5xl font-bold text-white mt-3">
-            Academic Foundation
-          </h2>
-
-        </div>
-
-
-        <div class="grid md:grid-cols-2 gap-6 mt-12">
-
-
-          <!-- MCA -->
-
-          <article class="glass rounded-2xl p-7">
-
-            <span class="text-xs font-mono text-violet-400">
-              POSTGRADUATE
-            </span>
-
-            <h3 class="text-2xl font-bold text-white mt-5">
-              Master of Computer Applications
-            </h3>
-
-            <p class="text-zinc-400 mt-2">
-              Atria Institute of Technology
-            </p>
-
-            <div class="mt-8">
-
-              <p class="text-xs uppercase tracking-wider text-zinc-600">
-                Academic Performance
-              </p>
-
-              <p class="text-5xl font-extrabold text-white mt-2">
-                9.20
-                <span class="text-sm text-zinc-500">
-                  CGPA
-                </span>
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <!-- BCA -->
-
-          <article class="glass rounded-2xl p-7">
-
-            <span class="text-xs font-mono text-emerald-400">
-              UNDERGRADUATE
-            </span>
-
-            <h3 class="text-2xl font-bold text-white mt-5">
-              Bachelor of Computer Applications
-            </h3>
-
-            <p class="text-zinc-400 mt-2">
-              KWTs Divekar BCA College
-            </p>
-
-            <div class="mt-8">
-
-              <p class="text-xs uppercase tracking-wider text-zinc-600">
-                Academic Performance
-              </p>
-
-              <p class="text-5xl font-extrabold text-white mt-2">
-                9.18
-                <span class="text-sm text-zinc-500">
-                  CGPA
-                </span>
-              </p>
-
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= CERTIFICATIONS ================= -->
-
-    <section
-      id="certifications"
-      class="py-24 border-t border-white/[.06]"
-    >
-
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-        <div class="max-w-2xl">
-
-          <p class="text-sm uppercase tracking-[.25em] text-emerald-400 font-semibold">
-            Certifications
-          </p>
-
-          <h2 class="text-4xl sm:text-5xl font-bold text-white mt-3">
-            Learning &
-            <span class="gradient-text">
-              Credentials.
-            </span>
-          </h2>
-
-        </div>
-
-
-        <div class="grid md:grid-cols-3 gap-5 mt-12">
-
-
-          <article class="glass rounded-2xl p-6">
-
-            <div class="w-12 h-12 rounded-xl bg-cyan-400/10 flex items-center justify-center text-cyan-300">
-              PY
-            </div>
-
-            <h3 class="text-lg font-bold text-white mt-5">
-              Python for Data Science
-            </h3>
-
-            <p class="text-sm text-zinc-500 mt-2">
-              Infosys Springboard
-            </p>
-
-            <span class="inline-flex mt-5 skill-tag">
-              Certificate
-            </span>
-
-          </article>
-
-
-          <article class="glass rounded-2xl p-6">
-
-            <div class="w-12 h-12 rounded-xl bg-violet-400/10 flex items-center justify-center text-violet-300">
-              JS
-            </div>
-
-            <h3 class="text-lg font-bold text-white mt-5">
-              Hands-On Web Development with JavaScript
-            </h3>
-
-            <p class="text-sm text-zinc-500 mt-2">
-              Infosys Springboard
-            </p>
-
-            <span class="inline-flex mt-5 skill-tag">
-              Certificate
-            </span>
-
-          </article>
-
-
-          <article class="glass rounded-2xl p-6">
-
-            <div class="w-12 h-12 rounded-xl bg-emerald-400/10 flex items-center justify-center text-emerald-300">
-              EX
-            </div>
-
-            <h3 class="text-lg font-bold text-white mt-5">
-              Excel Certification
-            </h3>
-
-            <p class="text-sm text-zinc-500 mt-2">
-              SkillCourse
-            </p>
-
-            <span class="inline-flex mt-5 skill-tag">
-              Certificate
-            </span>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= RESUME CTA ================= -->
-
-    <section class="py-20">
-
-      <div class="max-w-5xl mx-auto px-6 lg:px-8">
-
-        <div class="relative glass rounded-[2rem] p-8 sm:p-12 overflow-hidden">
-
-          <div class="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-cyan-400/10 blur-3xl"></div>
-
-          <div class="relative flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-
-            <div>
-
-              <p class="text-sm uppercase tracking-[.25em] text-cyan-400 font-semibold">
-                Resume
-              </p>
-
-              <h2 class="text-3xl sm:text-4xl font-bold text-white mt-3">
-                Interested in my profile?
-              </h2>
-
-              <p class="text-zinc-400 mt-3 max-w-xl">
-                Download my resume for a concise overview of my education,
-                skills, internship experience and analytics projects.
-              </p>
-
-            </div>
-
-            <a
-              href="resume.pdf"
-              download
-              class="shrink-0 inline-flex items-center justify-center rounded-xl bg-cyan-400 px-6 py-4 text-sm font-bold text-zinc-950 hover:bg-cyan-300 transition"
-            >
-              Download Resume ↓
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= CONTACT ================= -->
-
-    <section
-      id="contact"
-      class="py-24 border-t border-white/[.06]"
-    >
-
-      <div class="max-w-5xl mx-auto px-6 lg:px-8">
-
-        <div class="relative glass rounded-[2rem] p-8 sm:p-12 lg:p-16 overflow-hidden">
-
-          <div class="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-cyan-400/10 blur-3xl"></div>
-
-          <div class="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-violet-400/10 blur-3xl"></div>
-
-          <div class="relative text-center">
-
-            <p class="text-sm uppercase tracking-[.25em] text-cyan-400 font-semibold">
-              Let's Connect
-            </p>
-
-            <h2 class="text-4xl sm:text-5xl font-extrabold text-white mt-4">
-              Let's talk data.
-            </h2>
-
-            <p class="text-zinc-400 text-lg leading-8 max-w-2xl mx-auto mt-5">
-              I'm open to entry-level Data Analyst and related analytics
-              opportunities where I can apply my technical skills to practical
-              business problems.
-            </p>
-
-            <div class="flex flex-wrap justify-center gap-3 mt-8">
-
-              <a
-                href="mailto:akankshanaik314@gmail.com"
-                class="rounded-xl bg-cyan-400 px-6 py-3 text-sm font-bold text-zinc-950 hover:bg-cyan-300 transition"
-              >
-                Send an Email
-              </a>
-
-              <a
-                href="https://linkedin.com/in/akankshanaik314"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
-              >
-                LinkedIn ↗
-              </a>
-
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
-              >
-                GitHub ↗
-              </a>
-
-            </div>
-
-            <div class="mt-9 text-sm text-zinc-500">
-
-              Bangalore, Karnataka ·
-
-              <a
-                href="mailto:akankshanaik314@gmail.com"
-                class="text-zinc-300 hover:text-cyan-400 transition"
-              >
-                akankshanaik314@gmail.com
-              </a>
-
-              ·
-
-              <a
-                href="tel:+917411421350"
-                class="text-zinc-300 hover:text-cyan-400 transition"
-              >
-                +91 74114 21350
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer class="border-t border-white/[.06]">
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8">
-
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-
-        <p class="text-sm text-zinc-600">
-          ©
-          <span id="year"></span>
-          Akanksha U Naik.
-          Built with purpose & data.
-        </p>
-
-        <div class="flex items-center gap-5 text-sm text-zinc-600">
-
-          <a
-            href="#home"
-            class="hover:text-cyan-400 transition"
-          >
-            Back to top ↑
-          </a>
-
-          <span>
-            Data · Insights · Impact
-          </span>
-
-        </div>
-
-      </div>
-
+<!-- =========================================================
+     PROJECT 03 — RETAIL SALES SQL ANALYSIS
+     ========================================================= -->
+
+<article
+  class="project-card glass rounded-2xl overflow-hidden"
+  data-category="sql"
+>
+  <div class="p-6">
+
+    <div class="flex items-center justify-between">
+      <span class="text-xs font-mono text-violet-400">
+        PROJECT 03
+      </span>
+
+      <span class="skill-tag">
+        Completed
+      </span>
     </div>
 
-  </footer>
+    <h3 class="text-2xl font-bold text-white mt-6">
+      Retail Sales
+      <span class="gradient-text">SQL Analysis</span>
+    </h3>
 
+    <p class="text-sm text-zinc-400 leading-6 mt-4">
+      An end-to-end SQL analysis project using MySQL to explore
+      retail transactions, customer behavior, product performance,
+      sales trends and business insights.
+    </p>
 
-  <!-- ================= PROJECT MODAL ================= -->
+    <div class="flex flex-wrap gap-2 mt-5">
+      <span class="skill-tag">MySQL</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">CTEs</span>
+      <span class="skill-tag">Window Functions</span>
+      <span class="skill-tag">Joins</span>
+      <span class="skill-tag">Aggregations</span>
+    </div>
 
-  <div
-    id="projectModal"
-    class="hidden fixed inset-0 z-[90] modal-backdrop p-4 sm:p-8 overflow-y-auto"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modalTitle"
-  >
+    <div class="flex gap-3 mt-7">
 
-    <div class="min-h-full flex items-center justify-center">
-
-      <div
-        class="glass rounded-3xl max-w-3xl w-full p-7 sm:p-10 relative"
+      <button
+        type="button"
+        class="project-details flex-1 rounded-xl border border-violet-400/20 bg-violet-400/10 px-4 py-3 text-sm font-semibold text-violet-300 hover:bg-violet-400/20 transition"
+        data-project="retail"
       >
+        View Project →
+      </button>
 
-        <button
-          id="closeModal"
-          type="button"
-          aria-label="Close project details"
-          class="absolute top-5 right-5 w-11 h-11 rounded-lg border border-white/10 bg-white/5 text-white hover:bg-white/10"
-        >
-          ✕
-        </button>
-
-        <p
-          id="modalEyebrow"
-          class="text-xs font-mono text-cyan-400"
-        >
-          PROJECT
-        </p>
-
-        <h2
-          id="modalTitle"
-          class="text-3xl sm:text-4xl font-bold text-white mt-3 pr-10"
-        >
-          Project
-        </h2>
-
-        <p
-          id="modalDescription"
-          class="text-zinc-400 leading-7 mt-5"
-        >
-        </p>
-
-        <div
-          id="modalTools"
-          class="flex flex-wrap gap-2 mt-6"
-        >
-        </div>
-
-        <div class="mt-8">
-
-          <h3 class="text-lg font-bold text-white">
-            What I analyzed
-          </h3>
-
-          <ul
-            id="modalList"
-            class="mt-4 space-y-3 text-sm text-zinc-400"
-          >
-          </ul>
-
-        </div>
-
-        <div class="mt-8 p-5 rounded-xl border border-yellow-400/10 bg-yellow-400/5">
-
-          <p class="text-xs uppercase tracking-wider text-yellow-300">
-            Portfolio Status
-          </p>
-
-          <p
-            id="modalStatus"
-            class="text-sm text-zinc-400 mt-2 leading-6"
-          >
-          </p>
-
-        </div>
-
-      </div>
+      <a
+        href="https://github.com/akankshanaik3/retail-sales-sql-analysis"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex-1 rounded-xl bg-violet-400 px-4 py-3 text-center text-sm font-bold text-zinc-950 hover:bg-violet-300 transition"
+      >
+        GitHub ↗
+      </a>
 
     </div>
 
   </div>
+</article>
 
 
-  <!-- ================= BACK TO TOP ================= -->
+<!-- =========================================================
+     PROJECT MODAL
+     ========================================================= -->
 
-  <button
-    id="topBtn"
-    type="button"
-    aria-label="Back to top"
-    class="hidden fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-cyan-400 text-zinc-950 font-bold shadow-glow hover:bg-cyan-300"
+<div
+  id="projectModal"
+  class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+>
+  <div
+    class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto glass rounded-3xl border border-white/10 p-6 md:p-10"
   >
-    ↑
-  </button>
+
+    <!-- Close button -->
+    <button
+      id="closeProjectModal"
+      type="button"
+      class="absolute top-5 right-5 w-10 h-10 rounded-full border border-white/10 bg-white/5 text-zinc-300 hover:text-white hover:bg-white/10 transition"
+      aria-label="Close project modal"
+    >
+      ✕
+    </button>
+
+    <!-- Project heading -->
+    <div class="pr-12">
+
+      <p
+        id="modalEyebrow"
+        class="text-xs font-mono text-violet-400 uppercase tracking-widest"
+      >
+        PROJECT
+      </p>
+
+      <h2
+        id="modalTitle"
+        class="text-3xl md:text-4xl font-bold text-white mt-3"
+      >
+        Project
+      </h2>
+
+      <p
+        id="modalDescription"
+        class="text-zinc-400 leading-7 mt-4"
+      ></p>
+
+      <!-- Tools -->
+      <div
+        id="modalTools"
+        class="flex flex-wrap gap-2 mt-5"
+      ></div>
+
+    </div>
 
 
-  <!-- ================= JAVASCRIPT ================= -->
+    <!-- What I analyzed -->
+    <div class="mt-8">
 
-  <script>
+      <h3 class="text-lg font-bold text-white">
+        What I analyzed
+      </h3>
 
-    /* ================= YEAR ================= */
+      <ul
+        id="modalList"
+        class="mt-4 space-y-3 text-sm text-zinc-400"
+      ></ul>
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+    </div>
 
 
-    /* ================= MOBILE MENU ================= */
+    <!-- =====================================================
+         RETAIL SQL SCREENSHOTS
+         ===================================================== -->
 
-    const menuBtn =
-      document.getElementById("menuBtn");
+    <div
+      id="modalScreenshots"
+      class="mt-8 hidden"
+    >
 
-    const mobileMenu =
-      document.getElementById("mobileMenu");
+      <h3 class="text-lg font-bold text-white">
+        Project Screenshots
+      </h3>
 
-    menuBtn.addEventListener("click", () => {
+      <p class="text-sm text-zinc-500 mt-2">
+        Selected outputs from the Retail Sales SQL analysis.
+      </p>
 
-      const isOpen =
-        !mobileMenu.classList.contains("hidden");
 
-      mobileMenu.classList.toggle("hidden");
+      <div class="grid md:grid-cols-3 gap-4 mt-5">
 
-      menuBtn.setAttribute(
-        "aria-expanded",
-        String(!isOpen)
-      );
+        <!-- Screenshot 1 -->
+        <a
+          href="images/retail-sales-analysis.png"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block"
+        >
+
+          <img
+            src="images/retail-sales-analysis.png"
+            alt="Retail Sales SQL analysis results"
+            class="w-full rounded-xl border border-white/10 group-hover:border-violet-400/50 transition"
+          />
+
+          <p class="text-xs text-zinc-500 mt-2">
+            Sales Analysis
+          </p>
+
+        </a>
+
+
+        <!-- Screenshot 2 -->
+        <a
+          href="images/retail-category-analysis.png"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block"
+        >
+
+          <img
+            src="images/retail-category-analysis.png"
+            alt="Retail category analysis using SQL"
+            class="w-full rounded-xl border border-white/10 group-hover:border-violet-400/50 transition"
+          />
+
+          <p class="text-xs text-zinc-500 mt-2">
+            Category Analysis
+          </p>
+
+        </a>
+
+
+        <!-- Screenshot 3 -->
+        <a
+          href="images/retail-advanced-sql.png"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block"
+        >
+
+          <img
+            src="images/retail-advanced-sql.png"
+            alt="Advanced SQL analysis results"
+            class="w-full rounded-xl border border-white/10 group-hover:border-violet-400/50 transition"
+          />
+
+          <p class="text-xs text-zinc-500 mt-2">
+            Advanced SQL
+          </p>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- Portfolio status -->
+    <div
+      class="mt-8 p-5 rounded-2xl border border-white/10 bg-white/[0.03]"
+    >
+
+      <p class="text-xs font-mono text-violet-400 uppercase tracking-widest">
+        Portfolio Status
+      </p>
+
+      <p
+        id="modalStatus"
+        class="text-sm text-zinc-400 leading-6 mt-2"
+      ></p>
+
+    </div>
+
+
+    <!-- GitHub -->
+    <div class="mt-6">
+
+      <a
+        id="modalGithub"
+        href="https://github.com/akankshanaik3/retail-sales-sql-analysis"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center rounded-xl bg-violet-400 px-5 py-3 text-sm font-bold text-zinc-950 hover:bg-violet-300 transition"
+      >
+        View Full Project on GitHub ↗
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+/* =========================================================
+   PROJECT DATA
+   ========================================================= */
+
+const projectData = {
+
+  saas: {
+    eyebrow: "PROJECT 01 · FEATURED",
+    title: "SaaS User Engagement & Churn Analysis",
+
+    description:
+      "An end-to-end analytics case study focused on customer engagement, subscription behavior, churn analysis and recurring revenue.",
+
+    tools: [
+      "SQL",
+      "Python",
+      "Pandas",
+      "Power BI",
+      "DAX"
+    ],
+
+    list: [
+      "Analyze customer churn by plan type and customer segment.",
+      "Compare engagement behavior between active and churned users.",
+      "Calculate recurring revenue metrics such as MRR.",
+      "Use SQL joins, CTEs and window functions for analysis.",
+      "Clean and prepare event data using Python.",
+      "Present the analytical story through Power BI."
+    ],
+
+    status:
+      "Portfolio case study. Add the actual dataset, GitHub repository, Power BI report and calculated findings after completing the analysis."
+  },
+
+
+  excel: {
+    eyebrow: "PROJECT 02 · EXCEL",
+    title: "Excel Sales Performance Dashboard",
+
+    description:
+      "A business reporting project designed to transform sales data into an interactive Excel dashboard for performance analysis.",
+
+    tools: [
+      "Excel",
+      "XLOOKUP",
+      "Pivot Tables",
+      "Pivot Charts",
+      "Power Query"
+    ],
+
+    list: [
+      "Analyze sales by product and category.",
+      "Track revenue and sales KPIs.",
+      "Compare performance across regions.",
+      "Identify top-performing products.",
+      "Build Pivot-based visual reporting.",
+      "Use Excel formulas and transformations for analysis."
+    ],
+
+    status:
+      "Completed portfolio project. Replace the GitHub/demo placeholders with the actual workbook and repository link."
+  },
+
+
+  /* =========================================================
+     PROJECT 03 — COMPLETED SQL PROJECT
+     ========================================================= */
+
+  retail: {
+    eyebrow: "PROJECT 03 · SQL",
+
+    title: "Retail Sales SQL Analysis",
+
+    description:
+      "An end-to-end SQL analysis project using MySQL to explore retail transactions, customer behavior, product performance and sales trends.",
+
+    tools: [
+      "MySQL",
+      "SQL",
+      "CTEs",
+      "Window Functions",
+      "Joins",
+      "Aggregations"
+    ],
+
+    list: [
+      "Explored retail sales transactions using SQL.",
+      "Analyzed sales trends and business performance.",
+      "Analyzed product and category performance.",
+      "Used joins and aggregations for business analysis.",
+      "Applied CTEs for multi-step analytical queries.",
+      "Used window functions for advanced analysis."
+    ],
+
+    status:
+      "Completed portfolio project. Built in MySQL Workbench with SQL queries, analysis outputs and GitHub documentation."
+  }
+
+};
+
+
+/* =========================================================
+   PROJECT MODAL LOGIC
+   ========================================================= */
+
+const projectModal =
+  document.getElementById("projectModal");
+
+const closeProjectModal =
+  document.getElementById("closeProjectModal");
+
+const modalEyebrow =
+  document.getElementById("modalEyebrow");
+
+const modalTitle =
+  document.getElementById("modalTitle");
+
+const modalDescription =
+  document.getElementById("modalDescription");
+
+const modalTools =
+  document.getElementById("modalTools");
+
+const modalList =
+  document.getElementById("modalList");
+
+const modalStatus =
+  document.getElementById("modalStatus");
+
+const modalScreenshots =
+  document.getElementById("modalScreenshots");
+
+const modalGithub =
+  document.getElementById("modalGithub");
+
+
+/* =========================================================
+   OPEN PROJECT
+   ========================================================= */
+
+document.querySelectorAll(".project-details").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const project =
+      projectData[button.dataset.project];
+
+    if (!project) return;
+
+
+    /* Basic information */
+    modalEyebrow.textContent =
+      project.eyebrow;
+
+    modalTitle.textContent =
+      project.title;
+
+    modalDescription.textContent =
+      project.description;
+
+    modalStatus.textContent =
+      project.status;
+
+
+    /* Tools */
+    modalTools.innerHTML = "";
+
+    project.tools.forEach(tool => {
+
+      const span =
+        document.createElement("span");
+
+      span.className =
+        "skill-tag";
+
+      span.textContent =
+        tool;
+
+      modalTools.appendChild(span);
 
     });
 
 
-    document.querySelectorAll(".mobile-link").forEach(link => {
+    /* Analysis list */
+    modalList.innerHTML = "";
 
-      link.addEventListener("click", () => {
+    project.list.forEach(item => {
 
-        mobileMenu.classList.add("hidden");
+      const li =
+        document.createElement("li");
 
-        menuBtn.setAttribute(
-          "aria-expanded",
-          "false"
-        );
+      li.className =
+        "flex items-start gap-3";
 
-      });
+      li.innerHTML =
+        `<span class="text-violet-400 mt-1">✦</span>
+         <span>${item}</span>`;
+
+      modalList.appendChild(li);
 
     });
 
 
-    /* ================= SCROLL PROGRESS ================= */
+    /* =====================================================
+       SHOW SQL SCREENSHOTS ONLY FOR PROJECT 03
+       ===================================================== */
 
-    const progress =
-      document.getElementById("scrollProgress");
+    if (button.dataset.project === "retail") {
 
-    const topBtn =
-      document.getElementById("topBtn");
+      modalScreenshots.classList.remove("hidden");
 
-    function updateScroll() {
+      modalGithub.classList.remove("hidden");
 
-      const scrollTop =
-        window.scrollY;
+      modalGithub.href =
+        "https://github.com/akankshanaik3/retail-sales-sql-analysis";
 
-      const scrollHeight =
-        document.documentElement.scrollHeight -
-        window.innerHeight;
+    } else {
 
-      const percent =
-        scrollHeight > 0
-          ? (scrollTop / scrollHeight) * 100
-          : 0;
+      modalScreenshots.classList.add("hidden");
 
-      progress.style.width =
-        `${percent}%`;
-
-      if (scrollTop > 500) {
-
-        topBtn.classList.remove("hidden");
-
-      } else {
-
-        topBtn.classList.add("hidden");
-
-      }
+      modalGithub.classList.add("hidden");
 
     }
 
-    window.addEventListener(
-      "scroll",
-      updateScroll,
-      { passive: true }
-    );
 
-    updateScroll();
+    /* Show modal */
+    projectModal.classList.remove("hidden");
 
+    projectModal.classList.add("flex");
 
-    /* ================= BACK TO TOP ================= */
+    document.body.classList.add("overflow-hidden");
 
-    topBtn.addEventListener("click", () => {
+  });
 
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+});
 
-    });
 
+/* =========================================================
+   CLOSE MODAL
+   ========================================================= */
 
-    /* ================= PROJECT FILTERS ================= */
+function closeModal() {
 
-    const filters =
-      document.querySelectorAll(".project-filter");
+  projectModal.classList.add("hidden");
 
-    const projectCards =
-      document.querySelectorAll(".project-card");
+  projectModal.classList.remove("flex");
 
-    filters.forEach(filter => {
+  document.body.classList.remove("overflow-hidden");
 
-      filter.addEventListener("click", () => {
+}
 
-        const selected =
-          filter.dataset.filter;
 
-        filters.forEach(btn => {
+closeProjectModal.addEventListener(
+  "click",
+  closeModal
+);
 
-          btn.classList.remove("filter-active");
 
-          btn.classList.add(
-            "bg-white/5",
-            "text-zinc-400",
-            "border-white/10"
-          );
+/* Close when clicking outside modal */
+projectModal.addEventListener("click", event => {
 
-        });
+  if (event.target === projectModal) {
+    closeModal();
+  }
 
-        filter.classList.add("filter-active");
+});
 
-        filter.classList.remove(
-          "bg-white/5",
-          "text-zinc-400"
-        );
 
+/* Close with Escape key */
+document.addEventListener("keydown", event => {
 
-        projectCards.forEach(card => {
+  if (event.key === "Escape") {
+    closeModal();
+  }
 
-          const categories =
-            card.dataset.category.split(" ");
-
-          const visible =
-            selected === "all" ||
-            categories.includes(selected);
-
-          card.style.display =
-            visible ? "" : "none";
-
-          if (visible) {
-
-            card.classList.remove("fade-in");
-
-            void card.offsetWidth;
-
-            card.classList.add("fade-in");
-
-          }
-
-        });
-
-      });
-
-    });
-
-
-    /* ================= PROJECT MODAL DATA ================= */
-
-    const projectData = {
-
-      saas: {
-
-        eyebrow: "PROJECT 01 · FEATURED",
-
-        title:
-          "SaaS User Engagement & Churn Analysis",
-
-        description:
-          "An end-to-end analytics case study focused on customer engagement, subscription behavior, churn analysis and recurring revenue.",
-
-        tools: [
-          "SQL",
-          "Python",
-          "Pandas",
-          "Power BI",
-          "DAX"
-        ],
-
-        list: [
-          "Analyze customer churn by plan type and customer segment.",
-          "Compare engagement behavior between active and churned users.",
-          "Calculate recurring revenue metrics such as MRR.",
-          "Use SQL joins, CTEs and window functions for analysis.",
-          "Clean and prepare event data using Python.",
-          "Present the analytical story through Power BI."
-        ],
-
-        status:
-          "Portfolio case study. Add the actual dataset, GitHub repository, Power BI report and calculated findings after completing the analysis."
-
-      },
-
-
-      excel: {
-
-        eyebrow: "PROJECT 02 · EXCEL",
-
-        title:
-          "Excel Sales Performance Dashboard",
-
-        description:
-          "A business reporting project designed to transform sales data into an interactive Excel dashboard for performance analysis.",
-
-        tools: [
-          "Excel",
-          "XLOOKUP",
-          "Pivot Tables",
-          "Pivot Charts",
-          "Power Query"
-        ],
-
-        list: [
-          "Analyze sales by product and category.",
-          "Track revenue and sales KPIs.",
-          "Compare performance across regions.",
-          "Identify top-performing products.",
-          "Build Pivot-based visual reporting.",
-          "Use Excel formulas and transformations for analysis."
-        ],
-
-        status:
-          "Completed portfolio project. Replace the GitHub/demo placeholders with the actual workbook and repository link."
-
-      },
-
-
-      retail: {
-
-        eyebrow: "PROJECT 03 · SQL",
-
-        title:
-          "Retail Sales SQL Analysis",
-
-        description:
-          "A SQL-focused project analyzing retail transactions, customer behavior, product performance and sales trends.",
-
-        tools: [
-          "SQL",
-          "Joins",
-          "CTEs",
-          "Window Functions",
-          "Aggregations"
-        ],
-
-        list: [
-          "Calculate total sales and order-level metrics.",
-          "Analyze monthly sales trends.",
-          "Identify top-performing products.",
-          "Segment customers based on purchase activity.",
-          "Use CTEs for multi-step analytical queries.",
-          "Apply window functions for ranking and running totals."
-        ],
-
-        status:
-          "Planned portfolio project. Build the SQL database, queries, README and sample outputs before publishing it as completed work."
-
-      }
-
-    };
-
-
-    /* ================= PROJECT MODAL ================= */
-
-    const modal =
-      document.getElementById("projectModal");
-
-    const closeModal =
-      document.getElementById("closeModal");
-
-    const modalTitle =
-      document.getElementById("modalTitle");
-
-    const modalEyebrow =
-      document.getElementById("modalEyebrow");
-
-    const modalDescription =
-      document.getElementById("modalDescription");
-
-    const modalTools =
-      document.getElementById("modalTools");
-
-    const modalList =
-      document.getElementById("modalList");
-
-    const modalStatus =
-      document.getElementById("modalStatus");
-
-
-    document.querySelectorAll(".project-details")
-      .forEach(button => {
-
-        button.addEventListener("click", () => {
-
-          const data =
-            projectData[button.dataset.project];
-
-          if (!data) return;
-
-          modalEyebrow.textContent =
-            data.eyebrow;
-
-          modalTitle.textContent =
-            data.title;
-
-          modalDescription.textContent =
-            data.description;
-
-          modalStatus.textContent =
-            data.status;
-
-
-          modalTools.innerHTML =
-            data.tools
-              .map(tool =>
-                `<span class="skill-tag">${tool}</span>`
-              )
-              .join("");
-
-
-          modalList.innerHTML =
-            data.list
-              .map(item =>
-                `<li class="flex gap-3">
-                  <span class="text-cyan-400">→</span>
-                  <span>${item}</span>
-                </li>`
-              )
-              .join("");
-
-
-          modal.classList.remove("hidden");
-
-          document.body.style.overflow =
-            "hidden";
-
-          closeModal.focus();
-
-        });
-
-      });
-
-
-    function closeProjectModal() {
-
-      modal.classList.add("hidden");
-
-      document.body.style.overflow = "";
-
-    }
-
-
-    closeModal.addEventListener(
-      "click",
-      closeProjectModal
-    );
-
-
-    modal.addEventListener("click", event => {
-
-      if (event.target === modal) {
-
-        closeProjectModal();
-
-      }
-
-    });
-
-
-    document.addEventListener("keydown", event => {
-
-      if (
-        event.key === "Escape" &&
-        !modal.classList.contains("hidden")
-      ) {
-
-        closeProjectModal();
-
-      }
-
-    });
-
-
-    /* ================= CODE TABS ================= */
-
-    const codeTabs =
-      document.querySelectorAll(".code-tab");
-
-    const codePanels =
-      document.querySelectorAll(".code-panel");
-
-
-    codeTabs.forEach(tab => {
-
-      tab.addEventListener("click", () => {
-
-        const selected =
-          tab.dataset.tab;
-
-        codeTabs.forEach(btn => {
-
-          btn.classList.remove("tab-active");
-
-          btn.classList.add(
-            "bg-white/5",
-            "text-zinc-400"
-          );
-
-        });
-
-        tab.classList.add("tab-active");
-
-        tab.classList.remove(
-          "bg-white/5",
-          "text-zinc-400"
-        );
-
-
-        codePanels.forEach(panel => {
-
-          panel.classList.toggle(
-            "hidden",
-            panel.id !== `code-${selected}`
-          );
-
-        });
-
-      });
-
-    });
-
-
-    /* ================= DASHBOARD TABS ================= */
-
-    const dashboardTabs =
-      document.querySelectorAll(".dashboard-tab");
-
-    const dashboardLabel =
-      document.getElementById("dashboardLabel");
-
-    const bars =
-      document.querySelectorAll(".chart-bar");
-
-
-    const overviewHeights =
-      ["30%","45%","38%","60%","52%","72%","65%"];
-
-    const retentionHeights =
-      ["78%","65%","58%","50%","44%","38%","32%"];
-
-
-    dashboardTabs.forEach(tab => {
-
-      tab.addEventListener("click", () => {
-
-        const selected =
-          tab.dataset.dashboard;
-
-        dashboardTabs.forEach(btn => {
-
-          btn.classList.remove("tab-active");
-
-          btn.classList.add(
-            "bg-white/5",
-            "text-zinc-400"
-          );
-
-        });
-
-        tab.classList.add("tab-active");
-
-        tab.classList.remove(
-          "bg-white/5",
-          "text-zinc-400"
-        );
-
-
-        const heights =
-          selected === "overview"
-            ? overviewHeights
-            : retentionHeights;
-
-
-        bars.forEach((bar, index) => {
-
-          bar.style.height =
-            heights[index];
-
-        });
-
-
-        dashboardLabel.textContent =
-          selected === "overview"
-            ? "Revenue / customer overview concept"
-            : "Retention / cohort analysis concept";
-
-      });
-
-    });
-
-
-    /* ================= SMOOTH SECTION ACTIVE STATE ================= */
-
-    const sections =
-      document.querySelectorAll("section[id]");
-
-    const navLinks =
-      document.querySelectorAll(
-        'header a[href^="#"]'
-      );
-
-
-    const observer =
-      new IntersectionObserver(
-        entries => {
-
-          entries.forEach(entry => {
-
-            if (!entry.isIntersecting) return;
-
-            navLinks.forEach(link => {
-
-              link.classList.remove(
-                "text-cyan-400"
-              );
-
-              if (
-                link.getAttribute("href") ===
-                `#${entry.target.id}`
-              ) {
-
-                link.classList.add(
-                  "text-cyan-400"
-                );
-
-              }
-
-            });
-
-          });
-
-        },
-        {
-          threshold: 0.35
-        }
-      );
-
-
-    sections.forEach(section =>
-      observer.observe(section)
-    );
-
-  </script>
-
-</body>
-</html>
+});
+</script>
