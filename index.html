@@ -235,8 +235,6 @@
             <span class="text-violet-400">/&gt;</span>
           </a>
 
-          <!-- Desktop Navigation -->
-
           <div class="hidden md:flex items-center gap-7 text-sm text-zinc-400">
 
             <a href="#about" class="hover:text-cyan-400 transition">
@@ -275,8 +273,6 @@
               Resume ↓
             </a>
 
-            <!-- Mobile menu button -->
-
             <button
               id="menuBtn"
               type="button"
@@ -290,8 +286,6 @@
           </div>
 
         </div>
-
-        <!-- Mobile Menu -->
 
         <div
           id="mobileMenu"
@@ -900,7 +894,10 @@
               </h3>
 
               <p class="text-sm text-zinc-400 leading-6 mt-4">
-                Interactive Excel dashboard analyzing retail sales performance across regions, products, payment methods and delivery status using KPIs, Pivot Tables, Pivot Charts, XLOOKUP and Slicers.
+                Interactive Excel dashboard analyzing retail sales
+                performance across regions, products, payment methods
+                and delivery status using KPIs, Pivot Tables,
+                Pivot Charts, XLOOKUP and Slicers.
               </p>
 
               <div class="flex flex-wrap gap-2 mt-5">
@@ -943,7 +940,7 @@
                 </span>
 
                 <span class="skill-tag">
-                  SQL
+                  Completed
                 </span>
 
               </div>
@@ -956,12 +953,14 @@
               </h3>
 
               <p class="text-sm text-zinc-400 leading-6 mt-4">
-                SQL-based analysis of customer purchases, sales trends,
-                product performance and revenue patterns.
+                SQL-based analysis of retail transactions, customer
+                purchases, sales trends, product performance and
+                revenue patterns using MySQL.
               </p>
 
               <div class="flex flex-wrap gap-2 mt-5">
 
+                <span class="skill-tag">MySQL</span>
                 <span class="skill-tag">SQL</span>
                 <span class="skill-tag">CTEs</span>
                 <span class="skill-tag">Window Functions</span>
@@ -1571,7 +1570,7 @@ df[<span class="text-green-300">"session_minutes"</span>] = (
                   id="dashMrr"
                   class="text-2xl font-bold text-white mt-2"
                 >
-                  — 
+                  —
                 </p>
 
                 <p class="text-xs text-zinc-600 mt-1">
@@ -1642,8 +1641,6 @@ df[<span class="text-green-300">"session_minutes"</span>] = (
 
             </div>
 
-
-            <!-- Chart -->
 
             <div class="mt-5 rounded-xl bg-white/[.03] border border-white/[.06] p-5">
 
@@ -1906,7 +1903,6 @@ df[<span class="text-green-300">"session_minutes"</span>] = (
 
         <div class="grid md:grid-cols-2 gap-6 mt-12">
 
-
           <!-- MCA -->
 
           <article class="glass rounded-2xl p-7">
@@ -2007,7 +2003,6 @@ df[<span class="text-green-300">"session_minutes"</span>] = (
 
 
         <div class="grid md:grid-cols-3 gap-5 mt-12">
-
 
           <article class="glass rounded-2xl p-6">
 
@@ -2174,803 +2169,923 @@ df[<span class="text-green-300">"session_minutes"</span>] = (
               </a>
 
               <a
-                href="https://github.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition" 
-              > 
-                GitHub ↗ 
-              </a> 
- 
-            </div> 
- 
-            <div class="mt-9 text-sm text-zinc-500"> 
- 
-              Bangalore, Karnataka · 
- 
-              <a 
-                href="mailto:akankshanaik314@gmail.com" 
-                class="text-zinc-300 hover:text-cyan-400 transition" 
-              > 
-                akankshanaik314@gmail.com 
-              </a> 
- 
-              · 
- 
-              <a 
-                href="tel:+917411421350" 
-                class="text-zinc-300 hover:text-cyan-400 transition" 
-              > 
-                +91 74114 21350 
-              </a> 
- 
-            </div> 
- 
-          </div> 
- 
-        </div> 
- 
-      </div> 
- 
-    </section> 
- 
-  </main> 
- 
- 
-  <!-- ================= FOOTER ================= --> 
- 
-  <footer class="border-t border-white/[.06]"> 
- 
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8"> 
- 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4"> 
- 
-        <p class="text-sm text-zinc-600"> 
-          © 
-          <span id="year"></span> 
-          Akanksha U Naik. 
-          Built with purpose & data. 
-        </p> 
- 
-        <div class="flex items-center gap-5 text-sm text-zinc-600"> 
- 
-          <a 
-            href="#home" 
-            class="hover:text-cyan-400 transition" 
-          > 
-            Back to top ↑ 
-          </a> 
- 
-          <span> 
-            Data · Insights · Impact 
-          </span> 
- 
-        </div> 
- 
-      </div> 
- 
-    </div> 
- 
-  </footer> 
- 
- 
-  <!-- ================= PROJECT MODAL ================= --> 
- 
-  <div 
-    id="projectModal" 
-    class="hidden fixed inset-0 z-[90] modal-backdrop p-4 sm:p-8 overflow-y-auto" 
-    role="dialog" 
-    aria-modal="true" 
-    aria-labelledby="modalTitle" 
-  > 
- 
-    <div class="min-h-full flex items-center justify-center"> 
- 
-      <div 
-        class="glass rounded-3xl max-w-3xl w-full p-7 sm:p-10 relative" 
-      > 
- 
-        <button 
-          id="closeModal" 
-          type="button" 
-          aria-label="Close project details" 
-          class="absolute top-5 right-5 w-11 h-11 rounded-lg border border-white/10 bg-white/5 text-white hover:bg-white/10" 
-        > 
-          ✕ 
-        </button> 
- 
-        <p 
-          id="modalEyebrow" 
-          class="text-xs font-mono text-cyan-400" 
-        > 
-          PROJECT 
-        </p> 
- 
-        <h2 
-          id="modalTitle" 
-          class="text-3xl sm:text-4xl font-bold text-white mt-3 pr-10" 
-        > 
-          Project 
-        </h2> 
- 
-        <p 
-          id="modalDescription" 
-          class="text-zinc-400 leading-7 mt-5" 
-        > 
-        </p> 
- 
-        <div 
-          id="modalTools" 
-          class="flex flex-wrap gap-2 mt-6" 
-        > 
-        </div> 
- 
-        <div class="mt-8"> 
- 
-          <h3 class="text-lg font-bold text-white"> 
-            What I analyzed 
-          </h3> 
- 
-          <ul 
-            id="modalList" 
-            class="mt-4 space-y-3 text-sm text-zinc-400" 
-          > 
-          </ul> 
- 
-        </div> 
- 
-        <div id="modalProjectMedia" class="hidden mt-8">
+                href="https://github.com/akankshanaik3"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+              >
+                GitHub ↗
+              </a>
 
-          <h3 class="text-lg font-bold text-white">
-            Project Preview
-          </h3>
+            </div>
 
-          <a id="modalImageLink" href="#" target="_blank" rel="noopener noreferrer" class="block mt-4">
-            <img id="modalProjectImage" src="" alt="Project dashboard preview" class="w-full rounded-xl border border-white/10 hover:border-violet-400/40 transition" />
+            <div class="mt-9 text-sm text-zinc-500">
+
+              Bangalore, Karnataka ·
+
+              <a
+                href="mailto:akankshanaik314@gmail.com"
+                class="text-zinc-300 hover:text-cyan-400 transition"
+              >
+                akankshanaik314@gmail.com
+              </a>
+
+              ·
+
+              <a
+                href="tel:+917411421350"
+                class="text-zinc-300 hover:text-cyan-400 transition"
+              >
+                +91 74114 21350
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="border-t border-white/[.06]">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8">
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+
+        <p class="text-sm text-zinc-600">
+          ©
+          <span id="year"></span>
+          Akanksha U Naik.
+          Built with purpose & data.
+        </p>
+
+        <div class="flex items-center gap-5 text-sm text-zinc-600">
+
+          <a
+            href="#home"
+            class="hover:text-cyan-400 transition"
+          >
+            Back to top ↑
           </a>
 
-          <a id="modalRepoLink" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex mt-5 px-5 py-3 rounded-xl bg-violet-400/10 border border-violet-400/20 text-violet-300 hover:bg-violet-400/20 transition">
+          <span>
+            Data · Insights · Impact
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= PROJECT MODAL ================= -->
+
+  <div
+    id="projectModal"
+    class="hidden fixed inset-0 z-[90] modal-backdrop p-4 sm:p-8 overflow-y-auto"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+  >
+
+    <div class="min-h-full flex items-center justify-center">
+
+      <div
+        class="glass rounded-3xl max-w-4xl w-full p-7 sm:p-10 relative"
+      >
+
+        <button
+          id="closeModal"
+          type="button"
+          aria-label="Close project details"
+          class="absolute top-5 right-5 w-11 h-11 rounded-lg border border-white/10 bg-white/5 text-white hover:bg-white/10"
+        >
+          ✕
+        </button>
+
+        <p
+          id="modalEyebrow"
+          class="text-xs font-mono text-cyan-400"
+        >
+          PROJECT
+        </p>
+
+        <h2
+          id="modalTitle"
+          class="text-3xl sm:text-4xl font-bold text-white mt-3 pr-10"
+        >
+          Project
+        </h2>
+
+        <p
+          id="modalDescription"
+          class="text-zinc-400 leading-7 mt-5"
+        >
+        </p>
+
+        <div
+          id="modalTools"
+          class="flex flex-wrap gap-2 mt-6"
+        >
+        </div>
+
+        <div class="mt-8">
+
+          <h3 class="text-lg font-bold text-white">
+            What I analyzed
+          </h3>
+
+          <ul
+            id="modalList"
+            class="mt-4 space-y-3 text-sm text-zinc-400"
+          >
+          </ul>
+
+        </div>
+
+
+        <!-- Dynamic Project Screenshots -->
+
+        <div
+          id="modalScreenshots"
+          class="hidden mt-8"
+        >
+
+          <h3 class="text-lg font-bold text-white">
+            Project Screenshots
+          </h3>
+
+          <p
+            id="modalScreenshotsDescription"
+            class="text-sm text-zinc-500 mt-2"
+          >
+          </p>
+
+          <div
+            id="modalScreenshotGrid"
+            class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-5"
+          >
+          </div>
+
+          <a
+            id="modalRepoLink"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex mt-5 rounded-xl border border-cyan-400/20 bg-cyan-400/10 px-5 py-3 text-sm font-semibold text-cyan-300 hover:bg-cyan-400/20 transition"
+          >
             View GitHub Repository ↗
           </a>
 
         </div>
 
-        <div class="mt-8 p-5 rounded-xl border border-yellow-400/10 bg-yellow-400/5"> 
- 
-          <p class="text-xs uppercase tracking-wider text-yellow-300"> 
-            Portfolio Status 
-          </p> 
- 
-          <p 
-            id="modalStatus" 
-            class="text-sm text-zinc-400 mt-2 leading-6" 
-          > 
-          </p> 
- 
-        </div> 
- 
-      </div> 
- 
-    </div> 
- 
-  </div> 
- 
- 
-  <!-- ================= BACK TO TOP ================= --> 
- 
-  <button 
-    id="topBtn" 
-    type="button" 
-    aria-label="Back to top" 
-    class="hidden fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-cyan-400 text-zinc-950 font-bold shadow-glow hover:bg-cyan-300" 
-  > 
-    ↑ 
-  </button> 
- 
- 
-  <!-- ================= JAVASCRIPT ================= --> 
- 
-  <script> 
- 
-    /* ================= YEAR ================= */ 
- 
-    document.getElementById("year").textContent = 
-      new Date().getFullYear(); 
- 
- 
-    /* ================= MOBILE MENU ================= */ 
- 
-    const menuBtn = 
-      document.getElementById("menuBtn"); 
- 
-    const mobileMenu = 
-      document.getElementById("mobileMenu"); 
- 
-    menuBtn.addEventListener("click", () => { 
- 
-      const isOpen = 
-        !mobileMenu.classList.contains("hidden"); 
- 
-      mobileMenu.classList.toggle("hidden"); 
- 
-      menuBtn.setAttribute( 
-        "aria-expanded", 
-        String(!isOpen) 
-      ); 
- 
-    }); 
- 
- 
-    document.querySelectorAll(".mobile-link").forEach(link => { 
- 
-      link.addEventListener("click", () => { 
- 
-        mobileMenu.classList.add("hidden"); 
- 
-        menuBtn.setAttribute( 
-          "aria-expanded", 
-          "false" 
-        ); 
- 
-      }); 
- 
-    }); 
- 
- 
-    /* ================= SCROLL PROGRESS ================= */ 
- 
-    const progress = 
-      document.getElementById("scrollProgress"); 
- 
-    const topBtn = 
-      document.getElementById("topBtn"); 
- 
-    function updateScroll() { 
- 
-      const scrollTop = 
-        window.scrollY; 
- 
-      const scrollHeight = 
-        document.documentElement.scrollHeight - 
-        window.innerHeight; 
- 
-      const percent = 
-        scrollHeight > 0 
-          ? (scrollTop / scrollHeight) * 100 
-          : 0; 
- 
-      progress.style.width = 
-        `${percent}%`; 
- 
-      if (scrollTop > 500) { 
- 
-        topBtn.classList.remove("hidden"); 
- 
-      } else { 
- 
-        topBtn.classList.add("hidden"); 
- 
-      } 
- 
-    } 
- 
-    window.addEventListener( 
-      "scroll", 
-      updateScroll, 
-      { passive: true } 
-    ); 
- 
-    updateScroll(); 
- 
- 
-    /* ================= BACK TO TOP ================= */ 
- 
-    topBtn.addEventListener("click", () => { 
- 
-      window.scrollTo({ 
-        top: 0, 
-        behavior: "smooth" 
-      }); 
- 
-    }); 
- 
- 
-    /* ================= PROJECT FILTERS ================= */ 
- 
-    const filters = 
-      document.querySelectorAll(".project-filter"); 
- 
-    const projectCards = 
-      document.querySelectorAll(".project-card"); 
- 
-    filters.forEach(filter => { 
- 
-      filter.addEventListener("click", () => { 
- 
-        const selected = 
-          filter.dataset.filter; 
- 
-        filters.forEach(btn => { 
- 
-          btn.classList.remove("filter-active"); 
- 
-          btn.classList.add( 
-            "bg-white/5", 
-            "text-zinc-400", 
-            "border-white/10" 
-          ); 
- 
-        }); 
- 
-        filter.classList.add("filter-active"); 
- 
-        filter.classList.remove( 
-          "bg-white/5", 
-          "text-zinc-400" 
-        ); 
- 
- 
-        projectCards.forEach(card => { 
- 
-          const categories = 
-            card.dataset.category.split(" "); 
- 
-          const visible = 
-            selected === "all" || 
-            categories.includes(selected); 
- 
-          card.style.display = 
-            visible ? "" : "none"; 
- 
-          if (visible) { 
- 
-            card.classList.remove("fade-in"); 
- 
-            void card.offsetWidth; 
- 
-            card.classList.add("fade-in"); 
- 
-          } 
- 
-        }); 
- 
-      }); 
- 
-    }); 
- 
- 
-    /* ================= PROJECT MODAL DATA ================= */ 
- 
-    const projectData = { 
- 
-      saas: { 
- 
-        eyebrow: "PROJECT 01 · FEATURED", 
- 
-        title: 
-          "SaaS User Engagement & Churn Analysis", 
- 
-        description: 
-          "An end-to-end analytics case study focused on customer engagement, subscription behavior, churn analysis and recurring revenue.", 
- 
-        tools: [ 
-          "SQL", 
-          "Python", 
-          "Pandas", 
-          "Power BI", 
-          "DAX" 
-        ], 
- 
-        list: [ 
-          "Analyze customer churn by plan type and customer segment.", 
-          "Compare engagement behavior between active and churned users.", 
-          "Calculate recurring revenue metrics such as MRR.", 
-          "Use SQL joins, CTEs and window functions for analysis.", 
-          "Clean and prepare event data using Python.", 
-          "Present the analytical story through Power BI." 
-        ], 
- 
-        status: 
-          "Portfolio case study. Add the actual dataset, GitHub repository, Power BI report and calculated findings after completing the analysis." 
- 
-      }, 
- 
- 
-      excel: { 
- 
-        eyebrow: "PROJECT 02 · EXCEL", 
- 
-        title: 
-          "Excel Sales Performance Dashboard", 
- 
-        description: 
-          "An interactive Excel dashboard built to analyze retail sales performance across regions, products, payment methods and delivery status using Pivot Tables, Pivot Charts, XLOOKUP, KPIs and Slicers.", 
- 
-        tools: [ 
-          "Excel", 
-          "XLOOKUP", 
-          "Pivot Tables", 
-          "Pivot Charts", 
-          "Power Query" 
-        ], 
- 
-        list: [ 
+
+        <div class="mt-8 p-5 rounded-xl border border-yellow-400/10 bg-yellow-400/5">
+
+          <p class="text-xs uppercase tracking-wider text-yellow-300">
+            Portfolio Status
+          </p>
+
+          <p
+            id="modalStatus"
+            class="text-sm text-zinc-400 mt-2 leading-6"
+          >
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= BACK TO TOP ================= -->
+
+  <button
+    id="topBtn"
+    type="button"
+    aria-label="Back to top"
+    class="hidden fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-cyan-400 text-zinc-950 font-bold shadow-glow hover:bg-cyan-300"
+  >
+    ↑
+  </button>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    /* ================= YEAR ================= */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* ================= MOBILE MENU ================= */
+
+    const menuBtn =
+      document.getElementById("menuBtn");
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+
+      const isOpen =
+        !mobileMenu.classList.contains("hidden");
+
+      mobileMenu.classList.toggle("hidden");
+
+      menuBtn.setAttribute(
+        "aria-expanded",
+        String(!isOpen)
+      );
+
+    });
+
+
+    document.querySelectorAll(".mobile-link").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        mobileMenu.classList.add("hidden");
+
+        menuBtn.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      });
+
+    });
+
+
+    /* ================= SCROLL PROGRESS ================= */
+
+    const progress =
+      document.getElementById("scrollProgress");
+
+    const topBtn =
+      document.getElementById("topBtn");
+
+    function updateScroll() {
+
+      const scrollTop =
+        window.scrollY;
+
+      const scrollHeight =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+      const percent =
+        scrollHeight > 0
+          ? (scrollTop / scrollHeight) * 100
+          : 0;
+
+      progress.style.width =
+        `${percent}%`;
+
+      if (scrollTop > 500) {
+
+        topBtn.classList.remove("hidden");
+
+      } else {
+
+        topBtn.classList.add("hidden");
+
+      }
+
+    }
+
+    window.addEventListener(
+      "scroll",
+      updateScroll,
+      { passive: true }
+    );
+
+    updateScroll();
+
+
+    /* ================= BACK TO TOP ================= */
+
+    topBtn.addEventListener("click", () => {
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    });
+
+
+    /* ================= PROJECT FILTERS ================= */
+
+    const filters =
+      document.querySelectorAll(".project-filter");
+
+    const projectCards =
+      document.querySelectorAll(".project-card");
+
+    filters.forEach(filter => {
+
+      filter.addEventListener("click", () => {
+
+        const selected =
+          filter.dataset.filter;
+
+        filters.forEach(btn => {
+
+          btn.classList.remove("filter-active");
+
+          btn.classList.add(
+            "bg-white/5",
+            "text-zinc-400",
+            "border-white/10"
+          );
+
+        });
+
+        filter.classList.add("filter-active");
+
+        filter.classList.remove(
+          "bg-white/5",
+          "text-zinc-400"
+        );
+
+
+        projectCards.forEach(card => {
+
+          const categories =
+            card.dataset.category.split(" ");
+
+          const visible =
+            selected === "all" ||
+            categories.includes(selected);
+
+          card.style.display =
+            visible ? "" : "none";
+
+          if (visible) {
+
+            card.classList.remove("fade-in");
+
+            void card.offsetWidth;
+
+            card.classList.add("fade-in");
+
+          }
+
+        });
+
+      });
+
+    });
+
+
+    /* ================= PROJECT MODAL DATA ================= */
+
+    const projectData = {
+
+      /* ---------- PROJECT 1 ---------- */
+
+      saas: {
+
+        eyebrow: "PROJECT 01 · FEATURED",
+
+        title:
+          "SaaS User Engagement & Churn Analysis",
+
+        description:
+          "An end-to-end analytics case study focused on customer engagement, subscription behavior, churn analysis and recurring revenue.",
+
+        tools: [
+          "SQL",
+          "Python",
+          "Pandas",
+          "Power BI",
+          "DAX"
+        ],
+
+        list: [
+          "Analyze customer churn by plan type and customer segment.",
+          "Compare engagement behavior between active and churned users.",
+          "Calculate recurring revenue metrics such as MRR.",
+          "Use SQL joins, CTEs and window functions for analysis.",
+          "Clean and prepare event data using Python.",
+          "Present the analytical story through Power BI."
+        ],
+
+        status:
+          "Portfolio case study. Add the actual dataset, GitHub repository, Power BI report and calculated findings after completing the analysis."
+
+      },
+
+
+      /* ---------- PROJECT 2 ---------- */
+
+      excel: {
+
+        eyebrow: "PROJECT 02 · EXCEL · COMPLETED",
+
+        title:
+          "Excel Sales Performance Dashboard",
+
+        description:
+          "An interactive Excel dashboard built to analyze retail sales performance across regions, products, payment methods and delivery status using Pivot Tables, Pivot Charts, XLOOKUP, KPIs and Slicers.",
+
+        tools: [
+          "Excel",
+          "XLOOKUP",
+          "Pivot Tables",
+          "Pivot Charts",
+          "Power Query",
+          "Slicers",
+          "KPI Analysis"
+        ],
+
+        list: [
           "Analyze total sales, profit and order-level performance.",
           "Track Total Sales, Total Profit, Total Orders and Average Order Value.",
           "Compare sales performance across regions.",
           "Analyze top-performing products and categories.",
           "Analyze payment methods and delivery status.",
-          "Use Pivot Tables, Pivot Charts, XLOOKUP, KPIs and Slicers for interactive reporting." 
-        ], 
- 
-        repo: "https://github.com/akankshanaik3/Retail-Sales-Performance-Dashboard-Excel",
-        image: "images/excel-sales-dashboard.png",
+          "Use Pivot Tables, Pivot Charts, XLOOKUP, KPIs and Slicers for interactive reporting."
+        ],
 
-        status: 
-          "Completed portfolio project. Built an interactive Excel sales dashboard and documented the analysis, KPIs and workflow in GitHub." 
- 
-      }, 
- 
- 
-      retail: { 
- 
-        eyebrow: "PROJECT 03 · SQL", 
- 
-        title: 
-          "Retail Sales SQL Analysis", 
- 
-        description: 
-          "A SQL-focused project analyzing retail transactions, customer behavior, product performance and sales trends.", 
- 
-        tools: [ 
-          "SQL", 
-          "Joins", 
-          "CTEs", 
-          "Window Functions", 
-          "Aggregations" 
-        ], 
- 
-        list: [ 
-          "Calculate total sales and order-level metrics.", 
-          "Analyze monthly sales trends.", 
-          "Identify top-performing products.", 
-          "Segment customers based on purchase activity.", 
-          "Use CTEs for multi-step analytical queries.", 
-          "Apply window functions for ranking and running totals." 
-        ], 
- 
-        status: 
-          "Planned portfolio project. Build the SQL database, queries, README and sample outputs before publishing it as completed work." 
- 
-      } 
- 
-    }; 
- 
- 
-    /* ================= PROJECT MODAL ================= */ 
- 
-    const modal = 
-      document.getElementById("projectModal"); 
- 
-    const closeModal = 
-      document.getElementById("closeModal"); 
- 
-    const modalTitle = 
-      document.getElementById("modalTitle"); 
- 
-    const modalEyebrow = 
-      document.getElementById("modalEyebrow"); 
- 
-    const modalDescription = 
-      document.getElementById("modalDescription"); 
- 
-    const modalTools = 
-      document.getElementById("modalTools"); 
- 
-    const modalList = 
-      document.getElementById("modalList"); 
- 
-    const modalStatus = 
+        repo:
+          "https://github.com/akankshanaik3/Retail-Sales-Performance-Dashboard-Excel",
+
+        screenshots: [
+          {
+            src: "images/excel-sales-dashboard.png",
+            title: "Sales Dashboard",
+            alt: "Excel retail sales performance dashboard"
+          }
+        ],
+
+        screenshotDescription:
+          "Selected output from the Excel Retail Sales Performance Dashboard.",
+
+        status:
+          "Completed portfolio project. Built an interactive Excel sales dashboard and documented the analysis, KPIs and workflow in GitHub."
+
+      },
+
+
+      /* ---------- PROJECT 3 ---------- */
+
+      retail: {
+
+        eyebrow: "PROJECT 03 · SQL · COMPLETED",
+
+        title:
+          "Retail Sales SQL Analysis",
+
+        description:
+          "A SQL-focused project analyzing retail transactions, customer behavior, product performance and sales trends using MySQL.",
+
+        tools: [
+          "MySQL",
+          "SQL",
+          "Joins",
+          "CTEs",
+          "Window Functions",
+          "Aggregations"
+        ],
+
+        list: [
+          "Calculate total sales and order-level metrics.",
+          "Analyze sales trends over time.",
+          "Analyze product and category performance.",
+          "Analyze customer purchase behavior.",
+          "Use CTEs for multi-step analytical queries.",
+          "Apply window functions for ranking and comparisons."
+        ],
+
+        repo:
+          "https://github.com/akankshanaik3/retail-sales-sql-analysis",
+
+        screenshots: [
+          {
+            src: "images/retail-sales-analysis.png",
+            title: "Sales Analysis",
+            alt: "Retail Sales SQL analysis results"
+          },
+          {
+            src: "images/retail-category-analysis.png",
+            title: "Category Analysis",
+            alt: "Retail category analysis using SQL"
+          },
+          {
+            src: "images/retail-advanced-sql.png",
+            title: "Advanced SQL",
+            alt: "Advanced SQL analysis results"
+          }
+        ],
+
+        screenshotDescription:
+          "Selected outputs from the Retail Sales SQL analysis.",
+
+        status:
+          "Completed portfolio project. Built and analyzed the retail sales dataset using MySQL, documented the SQL queries in GitHub, and included selected analysis outputs."
+
+      }
+
+    };
+
+
+    /* ================= PROJECT MODAL ================= */
+
+    const modal =
+      document.getElementById("projectModal");
+
+    const closeModal =
+      document.getElementById("closeModal");
+
+    const modalTitle =
+      document.getElementById("modalTitle");
+
+    const modalEyebrow =
+      document.getElementById("modalEyebrow");
+
+    const modalDescription =
+      document.getElementById("modalDescription");
+
+    const modalTools =
+      document.getElementById("modalTools");
+
+    const modalList =
+      document.getElementById("modalList");
+
+    const modalStatus =
       document.getElementById("modalStatus");
 
-    const modalProjectMedia =
-      document.getElementById("modalProjectMedia");
+    const modalScreenshots =
+      document.getElementById("modalScreenshots");
 
-    const modalProjectImage =
-      document.getElementById("modalProjectImage");
+    const modalScreenshotsDescription =
+      document.getElementById("modalScreenshotsDescription");
 
-    const modalImageLink =
-      document.getElementById("modalImageLink");
+    const modalScreenshotGrid =
+      document.getElementById("modalScreenshotGrid");
 
     const modalRepoLink =
-      document.getElementById("modalRepoLink"); 
- 
- 
-    document.querySelectorAll(".project-details") 
-      .forEach(button => { 
- 
-        button.addEventListener("click", () => { 
- 
-          const data = 
-            projectData[button.dataset.project]; 
- 
-          if (!data) return; 
- 
-          modalEyebrow.textContent = 
-            data.eyebrow; 
- 
-          modalTitle.textContent = 
-            data.title; 
- 
-          modalDescription.textContent = 
-            data.description; 
- 
-          modalStatus.textContent = 
+      document.getElementById("modalRepoLink");
+
+
+    document.querySelectorAll(".project-details")
+      .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+          const data =
+            projectData[button.dataset.project];
+
+          if (!data) return;
+
+
+          /* ---------- Basic Information ---------- */
+
+          modalEyebrow.textContent =
+            data.eyebrow;
+
+          modalTitle.textContent =
+            data.title;
+
+          modalDescription.textContent =
+            data.description;
+
+          modalStatus.textContent =
             data.status;
 
-          if (data.image || data.repo) {
-            modalProjectMedia.classList.remove("hidden");
 
-            if (data.image) {
-              modalProjectImage.src = data.image;
-              modalImageLink.href = data.image;
-              modalProjectImage.classList.remove("hidden");
-            } else {
-              modalProjectImage.classList.add("hidden");
-            }
+          /* ---------- Tools ---------- */
 
-            if (data.repo) {
-              modalRepoLink.href = data.repo;
-              modalRepoLink.classList.remove("hidden");
-            } else {
-              modalRepoLink.classList.add("hidden");
-            }
+          modalTools.innerHTML =
+            data.tools
+              .map(tool =>
+                `<span class="skill-tag">${tool}</span>`
+              )
+              .join("");
+
+
+          /* ---------- Analysis List ---------- */
+
+          modalList.innerHTML =
+            data.list
+              .map(item =>
+                `<li class="flex gap-3">
+                  <span class="text-cyan-400">→</span>
+                  <span>${item}</span>
+                </li>`
+              )
+              .join("");
+
+
+          /* ---------- Screenshots ---------- */
+
+          if (
+            data.screenshots &&
+            data.screenshots.length
+          ) {
+
+            modalScreenshots.classList.remove("hidden");
+
+            modalScreenshotsDescription.textContent =
+              data.screenshotDescription || "";
+
+            modalScreenshotGrid.innerHTML =
+              data.screenshots
+                .map(screenshot => `
+                  <a
+                    href="${screenshot.src}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group block"
+                  >
+
+                    <img
+                      src="${screenshot.src}"
+                      alt="${screenshot.alt}"
+                      class="w-full rounded-xl border border-white/10 group-hover:border-cyan-400/40 transition"
+                    />
+
+                    <p class="text-xs text-zinc-500 mt-2">
+                      ${screenshot.title}
+                    </p>
+
+                  </a>
+                `)
+                .join("");
+
           } else {
-            modalProjectMedia.classList.add("hidden");
-          } 
- 
- 
-          modalTools.innerHTML = 
-            data.tools 
-              .map(tool => 
-                `<span class="skill-tag">${tool}</span>` 
-              ) 
-              .join(""); 
- 
- 
-          modalList.innerHTML = 
-            data.list 
-              .map(item => 
-                `<li class="flex gap-3"> 
-                  <span class="text-cyan-400">→</span> 
-                  <span>${item}</span> 
-                </li>` 
-              ) 
-              .join(""); 
- 
- 
-          modal.classList.remove("hidden"); 
- 
-          document.body.style.overflow = 
-            "hidden"; 
- 
-          closeModal.focus(); 
- 
-        }); 
- 
-      }); 
- 
- 
-    function closeProjectModal() { 
- 
-      modal.classList.add("hidden"); 
- 
-      document.body.style.overflow = ""; 
- 
-    } 
- 
- 
-    closeModal.addEventListener( 
-      "click", 
-      closeProjectModal 
-    ); 
- 
- 
-    modal.addEventListener("click", event => { 
- 
-      if (event.target === modal) { 
- 
-        closeProjectModal(); 
- 
-      } 
- 
-    }); 
- 
- 
-    document.addEventListener("keydown", event => { 
- 
-      if ( 
-        event.key === "Escape" && 
-        !modal.classList.contains("hidden") 
-      ) { 
- 
-        closeProjectModal(); 
- 
-      } 
- 
-    }); 
- 
- 
-    /* ================= CODE TABS ================= */ 
- 
-    const codeTabs = 
-      document.querySelectorAll(".code-tab"); 
- 
-    const codePanels = 
-      document.querySelectorAll(".code-panel"); 
- 
- 
-    codeTabs.forEach(tab => { 
- 
-      tab.addEventListener("click", () => { 
- 
-        const selected = 
-          tab.dataset.tab; 
- 
-        codeTabs.forEach(btn => { 
- 
-          btn.classList.remove("tab-active"); 
- 
-          btn.classList.add( 
-            "bg-white/5", 
-            "text-zinc-400" 
-          ); 
- 
-        }); 
- 
-        tab.classList.add("tab-active"); 
- 
-        tab.classList.remove( 
-          "bg-white/5", 
-          "text-zinc-400" 
-        ); 
- 
- 
-        codePanels.forEach(panel => { 
- 
-          panel.classList.toggle( 
-            "hidden", 
-            panel.id !== `code-${selected}` 
-          ); 
- 
-        }); 
- 
-      }); 
- 
-    }); 
- 
- 
-    /* ================= DASHBOARD TABS ================= */ 
- 
-    const dashboardTabs = 
-      document.querySelectorAll(".dashboard-tab"); 
- 
-    const dashboardLabel = 
-      document.getElementById("dashboardLabel"); 
- 
-    const bars = 
-      document.querySelectorAll(".chart-bar"); 
- 
- 
-    const overviewHeights = 
-      ["30%","45%","38%","60%","52%","72%","65%"]; 
- 
-    const retentionHeights = 
-      ["78%","65%","58%","50%","44%","38%","32%"]; 
- 
- 
-    dashboardTabs.forEach(tab => { 
- 
-      tab.addEventListener("click", () => { 
- 
-        const selected = 
-          tab.dataset.dashboard; 
- 
-        dashboardTabs.forEach(btn => { 
- 
-          btn.classList.remove("tab-active"); 
- 
-          btn.classList.add( 
-            "bg-white/5", 
-            "text-zinc-400" 
-          ); 
- 
-        }); 
- 
-        tab.classList.add("tab-active"); 
- 
-        tab.classList.remove( 
-          "bg-white/5", 
-          "text-zinc-400" 
-        ); 
- 
- 
-        const heights = 
-          selected === "overview" 
-            ? overviewHeights 
-            : retentionHeights; 
- 
- 
-        bars.forEach((bar, index) => { 
- 
-          bar.style.height = 
-            heights[index]; 
- 
-        }); 
- 
- 
-        dashboardLabel.textContent = 
-          selected === "overview" 
-            ? "Revenue / customer overview concept" 
-            : "Retention / cohort analysis concept"; 
- 
-      }); 
- 
-    }); 
- 
- 
-    /* ================= SMOOTH SECTION ACTIVE STATE ================= */ 
- 
-    const sections = 
-      document.querySelectorAll("section[id]"); 
- 
-    const navLinks = 
-      document.querySelectorAll( 
-        'header a[href^="#"]' 
-      ); 
- 
- 
-    const observer = 
-      new IntersectionObserver( 
-        entries => { 
- 
-          entries.forEach(entry => { 
- 
-            if (!entry.isIntersecting) return; 
- 
-            navLinks.forEach(link => { 
- 
-              link.classList.remove( 
-                "text-cyan-400" 
-              ); 
- 
-              if ( 
-                link.getAttribute("href") === 
-                `#${entry.target.id}` 
-              ) { 
- 
-                link.classList.add( 
-                  "text-cyan-400" 
-                ); 
- 
-              } 
- 
-            }); 
- 
-          }); 
- 
-        }, 
-        { 
-          threshold: 0.35 
-        } 
-      ); 
- 
- 
-    sections.forEach(section => 
-      observer.observe(section) 
-    ); 
- 
-  </script> 
- 
-</body> 
+
+            modalScreenshots.classList.add("hidden");
+
+            modalScreenshotsDescription.textContent = "";
+
+            modalScreenshotGrid.innerHTML = "";
+
+          }
+
+
+          /* ---------- GitHub Repository ---------- */
+
+          if (data.repo) {
+
+            modalRepoLink.href =
+              data.repo;
+
+            modalRepoLink.classList.remove("hidden");
+
+          } else {
+
+            modalRepoLink.classList.add("hidden");
+
+            modalRepoLink.removeAttribute("href");
+
+          }
+
+
+          /* ---------- Open Modal ---------- */
+
+          modal.classList.remove("hidden");
+
+          document.body.style.overflow =
+            "hidden";
+
+          closeModal.focus();
+
+        });
+
+      });
+
+
+    /* ================= CLOSE MODAL ================= */
+
+    function closeProjectModal() {
+
+      modal.classList.add("hidden");
+
+      document.body.style.overflow = "";
+
+    }
+
+
+    closeModal.addEventListener(
+      "click",
+      closeProjectModal
+    );
+
+
+    modal.addEventListener("click", event => {
+
+      if (event.target === modal) {
+
+        closeProjectModal();
+
+      }
+
+    });
+
+
+    document.addEventListener("keydown", event => {
+
+      if (
+        event.key === "Escape" &&
+        !modal.classList.contains("hidden")
+      ) {
+
+        closeProjectModal();
+
+      }
+
+    });
+
+
+    /* ================= CODE TABS ================= */
+
+    const codeTabs =
+      document.querySelectorAll(".code-tab");
+
+    const codePanels =
+      document.querySelectorAll(".code-panel");
+
+
+    codeTabs.forEach(tab => {
+
+      tab.addEventListener("click", () => {
+
+        const selected =
+          tab.dataset.tab;
+
+        codeTabs.forEach(btn => {
+
+          btn.classList.remove("tab-active");
+
+          btn.classList.add(
+            "bg-white/5",
+            "text-zinc-400"
+          );
+
+        });
+
+        tab.classList.add("tab-active");
+
+        tab.classList.remove(
+          "bg-white/5",
+          "text-zinc-400"
+        );
+
+
+        codePanels.forEach(panel => {
+
+          panel.classList.toggle(
+            "hidden",
+            panel.id !== `code-${selected}`
+          );
+
+        });
+
+      });
+
+    });
+
+
+    /* ================= DASHBOARD TABS ================= */
+
+    const dashboardTabs =
+      document.querySelectorAll(".dashboard-tab");
+
+    const dashboardLabel =
+      document.getElementById("dashboardLabel");
+
+    const bars =
+      document.querySelectorAll(".chart-bar");
+
+
+    const overviewHeights =
+      ["30%","45%","38%","60%","52%","72%","65%"];
+
+    const retentionHeights =
+      ["78%","65%","58%","50%","44%","38%","32%"];
+
+
+    dashboardTabs.forEach(tab => {
+
+      tab.addEventListener("click", () => {
+
+        const selected =
+          tab.dataset.dashboard;
+
+        dashboardTabs.forEach(btn => {
+
+          btn.classList.remove("tab-active");
+
+          btn.classList.add(
+            "bg-white/5",
+            "text-zinc-400"
+          );
+
+        });
+
+        tab.classList.add("tab-active");
+
+        tab.classList.remove(
+          "bg-white/5",
+          "text-zinc-400"
+        );
+
+
+        const heights =
+          selected === "overview"
+            ? overviewHeights
+            : retentionHeights;
+
+
+        bars.forEach((bar, index) => {
+
+          bar.style.height =
+            heights[index];
+
+        });
+
+
+        dashboardLabel.textContent =
+          selected === "overview"
+            ? "Revenue / customer overview concept"
+            : "Retention / cohort analysis concept";
+
+      });
+
+    });
+
+
+    /* ================= SMOOTH SECTION ACTIVE STATE ================= */
+
+    const sections =
+      document.querySelectorAll("section[id]");
+
+    const navLinks =
+      document.querySelectorAll(
+        'header a[href^="#"]'
+      );
+
+
+    const observer =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (!entry.isIntersecting) return;
+
+            navLinks.forEach(link => {
+
+              link.classList.remove(
+                "text-cyan-400"
+              );
+
+              if (
+                link.getAttribute("href") ===
+                `#${entry.target.id}`
+              ) {
+
+                link.classList.add(
+                  "text-cyan-400"
+                );
+
+              }
+
+            });
+
+          });
+
+        },
+        {
+          threshold: 0.35
+        }
+      );
+
+
+    sections.forEach(section =>
+      observer.observe(section)
+    );
+
+  </script>
+
+</body>
 </html>
